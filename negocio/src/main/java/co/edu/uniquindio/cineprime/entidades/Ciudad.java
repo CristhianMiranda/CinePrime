@@ -24,7 +24,16 @@ public class Ciudad implements Serializable {
 /*
     @OneToMany(mappedBy = "ciudad")
     private List<Teatro> teatros;
+
 */
+    //*@OneToMany
+//    private List<Teatro> teatros;*/
+    @OneToMany(mappedBy = "ciudad")
+    private List<Teatro> teatros;
+
+    @OneToMany(mappedBy="ciudad")
+    private List<Usuario> usuarios;
+
     @Builder
     public Ciudad(String nombre){
         this.nombre = nombre;

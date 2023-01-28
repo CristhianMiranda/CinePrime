@@ -1,6 +1,5 @@
 package co.edu.uniquindio.cineprime.entidades;
 import lombok.*;
-import org.springframework.validation.annotation.Validated;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -16,6 +15,9 @@ public class Usuario extends Persona implements Serializable {
     @ElementCollection
     private List<String> telefono;
 
+    @JoinColumn( nullable = true)
+    @Getter
+    private boolean activacion;
 
     @ManyToOne
     @JoinColumn(name = "codigoCiudad", nullable = true)
@@ -27,6 +29,17 @@ public class Usuario extends Persona implements Serializable {
     @Column(length = 10)
     @NotNull
     private int cedula;
+
+
+    @OneToMany(mappedBy = "usuario")
+    private List<Compra> compras;
+
+    @OneToMany(mappedBy = "usuario")
+    private List<CuponUsuario> cuponesUsuario;
+
+    @ManyToOne
+    @JoinColumn(name = "codigoTarjeta", nullable = true)
+    private TarjetaCinePrime tarjetaCinePrime;
 
     public Usuario(String nombre, @Email String email, String contraseña, int cedula) {
         super(nombre, email, contraseña);

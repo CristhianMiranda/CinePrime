@@ -1,0 +1,303 @@
+@font-face {
+    font-family: 'Iceland';
+    src: url('fuentes_css3/Iceland/Iceland-Regular.ttf') format('truetype');
+  }
+
+body{
+}
+.titulo-principal{
+    padding-left: 30px;
+}
+
+.panel{
+    width: auto;
+    height: 175px;
+    left: 0px;
+    top: 0px;
+    background-color: black;
+}
+
+#banner{
+    position: absolute;
+    width: 425px;
+    height: 265px;
+    left: -15px;
+    top: -30px;
+    
+    
+}
+
+.navegacion{   
+    border-bottom: 5px solid gray;
+}
+
+
+
+
+.pestañas
+{
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    left: 311px;
+    top: 75px;
+    font-family: 'Iceland';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 29px;
+    display: inline-flex;
+    /*display: flex;*/
+    align-items: center;
+    
+   
+}
+
+.pestañas a{
+    margin-right: 80px;
+    color: #851A1A;
+    text-decoration: none;
+}
+.pestañas a:hover{
+    color:white;
+    text-decoration:underline;
+}
+
+#tarjeta-prime:hover{
+    color: #851A1A;
+    text-decoration: underline;
+    
+}
+
+.yellow, .white {
+    display: inline;
+}
+
+.yellow {
+    color: yellow;
+    position: absolute;
+    
+  }
+  
+  .white {
+    color: white;
+    margin-left: 110px;
+  }
+
+
+
+.cambio-color{
+    color: gray;
+    
+    position: absolute;
+}
+
+#ubicacion{
+    margin-top: -10px;
+    margin-left: 90px;
+    position: absolute;
+}
+
+#registrar {
+    cursor: pointer;
+    position: absolute;
+    top: -40px;
+    left: 1230px;
+    margin-top: 30px;
+    color: white;
+    background-color: gray;
+    border-radius: 30px;
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    white-space: nowrap;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 50px;
+    word-break: keep-all;
+}
+
+#iniciar-sesion {
+    cursor: pointer;
+    position: absolute;
+    top: -40px;
+    left: 1430px;
+    margin-top: 30px;
+    color: white;
+    background-color: #851A1A;
+    border-radius: 30px;
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    white-space: nowrap;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 50px;
+    word-break: keep-all;
+}
+
+
+
+
+
+  
+
+
+main{
+    border-top: 5px solid gray;
+    height: 900px;
+    
+    background: url(logos/fondo.jpg); /*imagen de fondo*/
+    background-size: cover; /*ajusta la imagen de fondo al tamaño del contenedor*/
+    background-position: center; /*posiciona la imagen de fondo en el centro del contenedor*/
+}
+
+#terminos{
+    border-top: 5px solid gray;
+    height: 750px;
+
+    background: url(logos/terminos.jpg); /*imagen de fondo*/
+    background-size: cover; /*ajusta la imagen de fondo al tamaño del contenedor*/
+    background-position: center; /*posiciona la imagen de fondo en el centro del contenedor*/
+}
+
+
+
+
+h2 {
+    text-shadow: 4px 4px 15px #851A1A; /* sombra de texto */
+    text-shadow: 4px 4px 15px white, 0 0 20px #851A1A; /* sombra de texto */
+    text-align: center;
+    font-size: 2.5em;
+    margin: 2em 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #FFD700; /* color dorado */
+    
+    font-family: 'Iceland';
+}
+
+
+  form {
+    margin: 30px 43.5%;
+}
+
+form label{
+    display:block;
+    font-size: 25px;
+    margin: 40px 0 10px;
+    
+    font-family: 'Iceland';
+    
+    color: white;
+
+    text-shadow: 4px 4px 15px #851A1A; /* sombra de texto */
+    text-shadow: 4px 4px 15px white, 0 0 20px #851A1A; /* sombra de texto */
+    /*
+    
+     
+
+    */
+}
+
+form input{
+    
+    width: 110%;
+    margin: 0 0 0 0;
+
+    border: 2px solid black; /*borde*/
+    border-radius: 10px; /* radio de los bordes*/
+    width: 250px; /*ancho del input*/
+    padding: 10px; /*espacio interior */
+    outline: none; /*elimina el borde predeterminado*/
+    box-shadow: 0 0 10px 1px red; /*sombra alrededor del input*/
+}
+
+.enviar{
+    margin: 30% 0 15px 14% ;
+
+    text-align: center;
+
+    background-color: black; /*color de fondo*/
+    color: white; /*color de letra*/
+    
+    border: 2px solid red; /*borde*/
+    font-size: 25px; /*tamaño de letra*/
+    
+    border-radius: 15px; /* radio de los bordes redondos*/
+    padding: 0px 0px 0 0; /*espacio interior */
+    font-weight: bold; /*grosor de letra */
+
+    width: 200px; /*ancho del input*/
+    height: 40px; /*alto del input*/
+    
+    font-family: 'Iceland';
+}
+p{
+    margin: 4% 0 5% 1%;
+    color: white;
+    text-shadow: 4px 4px 15px #851A1A; /* sombra de texto */
+    text-shadow: 4px 4px 15px black, 0 0 1px #851A1A; /* sombra de texto */
+    text-align: center;
+    font-family: 'Iceland';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+
+
+
+  footer{
+    border-top: 5px solid gray;
+}
+
+.pie-pagina{
+    background: black;
+    display: flex;
+}
+
+#logo-pie-pagina{
+    width: 412px;
+    height: 233px;
+    left: -51px;
+    top: 3175px;
+    
+}
+
+.legal li{
+    
+
+    margin-top: 100px;
+    display: inline-block;
+    font-family: 'Iceland';
+    font-style: normal;
+    font-size: 30px;
+    line-height: 29px;
+    align-items: center;
+}
+
+
+.legal a{
+    margin-right: 120px;
+    color: white;
+    text-decoration: none;
+}
+.legal a:hover{
+    color:white;
+    text-decoration:underline;
+}
+
+#copyright{
+    display: grid;
+    margin-left: 450px;
+    /*place-items: center;*/
+}
+
+

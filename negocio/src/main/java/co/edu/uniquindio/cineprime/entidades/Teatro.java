@@ -28,10 +28,19 @@ public class Teatro implements Serializable {
     @JoinColumn(nullable = false)
     private Ciudad ciudad;
 */
+    @OneToMany/*(mappedBy = "codigo")*/
+    private List<SalaVip> salaVips;
+
+    @OneToMany/*(mappedBy = "codigo")*/
+    private List<Sala> sala;
 
     @ManyToOne
     @JoinColumn(nullable = false)
     private AdministradorTeatro administrador;
+
+    @ManyToOne
+    @JoinColumn(nullable = false)
+    private Ciudad ciudad;
 /*
     @OneToMany(mappedBy = "teatro")
     private List<Sala> salas;

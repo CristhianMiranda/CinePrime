@@ -3,12 +3,12 @@ package co.edu.uniquindio.cineprime.servicios;
 import co.edu.uniquindio.cineprime.entidades.*;
 
 import java.util.ArrayList;
-import java.util.Optional;
+import java.util.List;
 
 public interface    UsuarioServicio {
 
 
-
+    ArrayList<Pelicula> encontrarPeliculas(String nombre) throws Exception;
 
     /**
      * Método para registrar usuario
@@ -16,17 +16,24 @@ public interface    UsuarioServicio {
      * @param email es el correo del usuario y debe ser único
      * @param contrasena esta es la contraseña del usuario asociada a la cuenta del usuario
      * @param nombre corresponde al nombre digitado por el usuario
-     * @param codigoCiudad corresponde a la ciudad que se encuentra el usuario.
      * @return
      * @throws Exception
      */
-    Usuario registrarUsuario(int cedula,String email,String contrasena,String nombre,int codigoCiudad) throws Exception;
+    Usuario registrarUsuario(int cedula,String email,String contrasena,String nombre) throws Exception;
 
-    void crearBono(int cantidad);
+    Cupon crearBono(float cantidad,String criterio,String descripcion,Boolean usuarioNuevo);
 
-    void usarBono(String cifrado,Usuario usuario) throws Exception;
+    TarjetaCinePrime crearTarjetaCinePrime();
+    void usarCupon(Cupon cupon,Usuario usuario) throws Exception;
 
+    void realizarCompra(Usuario usuario,Funcion funcion,CuponUsuario cuponUsuario);
+    CuponUsuario encontrarCuponUsuario(int codigo);
+
+    List<Compra> listarCompras(int cedula);
+    Funcion obtenerFuncionCodigo(int codigo);
     Usuario verificarLogin(String email, String contrasena) throws Exception;
+
+    void asociarTarjetaCinePrime(Usuario usuario,TarjetaCinePrime tarjetaCinePrime);
 
     /**NOINOSNOSNOSNOS
      * Metodo para recuperar la contraseña de la cuenta de usuario con el correo
@@ -55,8 +62,12 @@ public interface    UsuarioServicio {
 
     ArrayList<Usuario> obtenerUsuarios();
     Usuario guardarUsuario(Usuario usuario) throws Exception;
-    Optional<Usuario> obtenerPorId(int id);
+
+    Usuario obtenerPorCedula(int cedula) throws Exception;
+
     boolean eliminarUsuario(int id);
+
+    Cupon buscarCupon(String codigo) throws  Exception;
 
 
 

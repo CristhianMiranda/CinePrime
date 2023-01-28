@@ -1,0 +1,355 @@
+@font-face {
+    font-family: 'Iceland';
+    src: url('fuentes_css3/Iceland/Iceland-Regular.ttf') format('truetype');
+  }
+
+body{
+}
+.titulo-principal{
+    padding-left: 30px;
+}
+
+.panel{
+    width: auto;
+    height: 175px;
+    left: 0px;
+    top: 0px;
+    background-color: black;
+}
+
+#banner{
+    position: absolute;
+    width: 425px;
+    height: 265px;
+    left: -15px;
+    top: -30px;
+    
+    
+}
+
+.navegacion{   
+    border-bottom: 5px solid gray;
+}
+
+
+
+
+.pestañas
+{
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    left: 311px;
+    top: 75px;
+    font-family: 'Iceland';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 29px;
+    display: inline-flex;
+    /*display: flex;*/
+    align-items: center;
+    
+   
+}
+
+.pestañas a{
+    margin-right: 80px;
+    color: #851A1A;
+    text-decoration: none;
+}
+.pestañas a:hover{
+    color:white;
+    text-decoration:underline;
+}
+
+#tarjeta-prime:hover{
+    color: #851A1A;
+    text-decoration: underline;
+    
+}
+
+.yellow, .white {
+    display: inline;
+}
+
+.yellow {
+    color: yellow;
+    position: absolute;
+    
+  }
+  
+  .white {
+    color: white;
+    margin-left: 110px;
+  }
+
+
+
+.cambio-color{
+    color: gray;
+    
+    position: absolute;
+}
+
+#ubicacion{
+    margin-top: -10px;
+    margin-left: 90px;
+    position: absolute;
+}
+
+#registrar {
+    cursor: pointer;
+    position: absolute;
+    top: -40px;
+    left: 1230px;
+    margin-top: 30px;
+    color: white;
+    background-color: gray;
+    border-radius: 30px;
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    white-space: nowrap;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 50px;
+    word-break: keep-all;
+}
+
+#iniciar-sesion {
+    cursor: pointer;
+    position: absolute;
+    top: -40px;
+    left: 1430px;
+    margin-top: 30px;
+    color: white;
+    background-color: #851A1A;
+    border-radius: 30px;
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    white-space: nowrap;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 50px;
+    word-break: keep-all;
+}
+
+
+
+
+
+  
+
+
+main{
+    border-top: 5px solid gray;
+    margin-bottom: 12em;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin: 2em 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffa600;
+  }
+  
+/* Estilos comunes para todas las películas */
+.pelicula {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1em;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+  }
+  
+  /* Estilos específicos para cada película */
+  #pelicula-1 {
+    background-color: #e5f5ff;
+  }
+  
+  #pelicula-2 {
+    background-color: #fff5e5;
+  }
+  
+  /* Estilos para el título de la película */
+  .titulo-pelicula {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+  
+  /* Estilos para la imagen de la película */
+  .imagen-pelicula {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+  }
+  
+  /* Estilos para la descripción de la película */
+  .descripcion-pelicula {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 1em;
+  }
+  
+  /* Estilos para el botón de entradas */
+  .boton-entradas {
+    padding: 0.75em 1.5em;
+    border: none;
+    border-radius: 4px;
+    background-color: #ffa600;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .boton-entradas:hover {
+    background-color: #ff8c00;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+  footer{
+    border-top: 5px solid gray;
+}
+
+.pie-pagina{
+    background: black;
+    display: flex;
+}
+
+#logo-pie-pagina{
+    width: 412px;
+    height: 233px;
+    left: -51px;
+    top: 3175px;
+    
+}
+
+.legal li{
+    
+
+    margin-top: 100px;
+    display: inline-block;
+    font-family: 'Iceland';
+    font-style: normal;
+    font-size: 30px;
+    line-height: 29px;
+    align-items: center;
+}
+
+
+
+
+.legal a{
+    margin-right: 120px;
+    color: white;
+    text-decoration: none;
+}
+.legal a:hover{
+    color:white;
+    text-decoration:underline;
+}
+
+#copyright{
+    display: grid;
+    margin-left: 450px;
+    /*place-items: center;*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.pestañas h1 a{
+    color: #851A1A;
+}
+.pestañas h1 a:hover {
+    color:#c78c19;
+    text-decoration:underline;
+}
+
+.pestañas h2{
+    
+    padding-left: 80px;
+    
+
+}
+.pestañas h2:hover {
+    color:#c78c19;
+    text-decoration:underline;
+}
+
+.pestañas h3{
+    padding-left: 80px;
+    
+}
+.pestañas h3:hover {
+    color:#c78c19;
+    text-decoration:underline;
+}
+*/

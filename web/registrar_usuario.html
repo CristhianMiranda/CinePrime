@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Registrar Usuario - Cine Prime</title>
+        
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="estilo.css">
+    </head>           
+
+    <body>
+        
+        <header>
+            <div class="panel">
+
+                <h1><a href="index.html"><img id="banner" src="logos/CinePrimeLogo.png"></a></h1>
+
+                <nav class="navegacion">
+                    <ul class="pestañas">
+
+                        <li><a href="index.html">CARTELERA</a></li>
+                        <li><a href="index.html">CONFITERIA</a></li>
+                        <li><a href="index.html">PROMOCIONES</a></li>
+                        <li><a id="tarjeta-prime" href="index.html">
+                            <span class="yellow">TARJETA</span>
+                            <span class="white">PRIME</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="seleccionar-ciudad" href="https://www.youtube.com">
+                                <span class="cambio-color">SELECCIONAR</span>
+                                
+                            </a>
+                            
+                        </li>
+                        <li>
+                            <a class="seleccionar-ciudad" href="https://www.youtube.com">
+                                <span><img id="ubicacion" src="logos/ubicacion.png"></span>
+                            </a>
+                        </li>
+                        <li><a href="registrar_usuario.html">
+                            <button id="registrar">
+                                Registrarse
+                            </button>
+                            </a>
+                        </li>
+                        <li><a href="https://www.google.com">
+                            <button id="iniciar-sesion">
+                                Iniciar sesión
+                            </button>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+            
+        </header> 
+        <main> 
+            <p>Registrar Usuario</p>
+            <form>
+                <label for="cedula">Cedula</label>
+                <input type="text" id="cedula" >
+
+                <label for="nombrecompleto">Nombre Completo</label>
+                <input type="text" id="nombrecompleto" >
+
+                <label for="email">Correo</label>
+                <input type="email" id="email" >
+
+                <label for="contrasena">Contraseña</label>
+                <input type="password" id="contrasena" >
+
+                <label for="fecha-nacimiento">Fecha de nacimiento</label>
+                <input type="date" id="fecha-nacimiento" >
+
+                <input type="submit" class="enviar"value="Registrarme">
+            </form>  
+        </main>
+        
+        <footer>
+            <div class="pie-pagina">
+
+                <h1><a href="index.html"><img id="logo-pie-pagina" src="logos/CinePrimeLogo.png"></a></h1>
+                
+                <nav>
+                    <ul class="legal">
+
+                        <li class="orden"><a href="informacion_legal.html">Informacion legal</a></li>
+                        <li class="orden"><a href="index.html">Acerca de Cine Prime</a></li>
+                        <li class="orden"><a href="index.html">Contactos PQRS</a></li>
+                        <li class="orden"><a href="index.html">Preguntas Frecuentes</a></li>
+                        <li id="copyright"><a href="index.html">© 2022 Cine Prime</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+
+        
+    </body>
+
+</html>

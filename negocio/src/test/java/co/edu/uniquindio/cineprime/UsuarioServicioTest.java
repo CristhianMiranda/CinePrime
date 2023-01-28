@@ -1,23 +1,73 @@
 package co.edu.uniquindio.cineprime;
 
+import co.edu.uniquindio.cineprime.entidades.Cupon;
+import co.edu.uniquindio.cineprime.entidades.Funcion;
 import co.edu.uniquindio.cineprime.entidades.Usuario;
+import co.edu.uniquindio.cineprime.servicios.EmailService;
 import co.edu.uniquindio.cineprime.servicios.UsuarioServicio;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.jdbc.Sql;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 @SpringBootTest
 //@Transactional
+
 public class UsuarioServicioTest {
 
     @Autowired
     private UsuarioServicio usuarioServicio;
 
-  //  @Sql("classpath:dataset.sql")
+    @Autowired
+    private EmailService emailService;
+
+
+    @Test
+    //@Sql("classpath:dataset.sql")
+    public void encontrarPelicula()  {
+        try {
+            usuarioServicio.encontrarPeliculas("dragon");
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Test
+    public void crearCupon(){
+        Cupon cupon;
+        cupon = usuarioServicio.crearBono(20.0F,"navidadeño","",false);
+    }
+
+    @Test
+    public void usarCupon() throws Exception {
+
+        try {
+            usuarioServicio.usarCupon(usuarioServicio.buscarCupon("SBJOSNHX"), usuarioServicio.obtenerPorCedula(1010125168));
+
+        }catch (Exception e)
+
+        {
+            e.printStackTrace();
+        }
+    }
+
+
+    @Test
+    //@Sql("classpath:dataset.sql")
+    public void compra() throws Exception {
+        Funcion funcion = new Funcion();
+       usuarioServicio.realizarCompra(usuarioServicio.obtenerPorCedula(1010125168),usuarioServicio.obtenerFuncionCodigo(1),usuarioServicio.encontrarCuponUsuario(1));
+    }
+
+    @Test
+    public void asociarTarjetaCinePrime() throws Exception {
+        usuarioServicio.asociarTarjetaCinePrime(usuarioServicio.obtenerPorCedula(1010125168),usuarioServicio.crearTarjetaCinePrime());
+    }
+
+
+
+
 
     /**
      * Test para registrar un usuario
@@ -26,32 +76,13 @@ public class UsuarioServicioTest {
     public void registrarUsuario() {
         Usuario usuario = new Usuario();
         try {
-            usuario= usuarioServicio.registrarUsuario(1561,"sadasasds","sdsajsad","cristhian",2);
-          // usuarioServicio.usarBono("COQJ8A9Z",usuario);
+            usuario= usuarioServicio.registrarUsuario(1010125168,"cristhianmirandapro@gmail.com","andres12","Cristhian Miranda");
+            Assertions.assertNotNull(usuario);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
     }
-
-
-    @Test
-    public void verificarLoginTest()
-    {
-        try {
-
-            usuarioServicio.verificarLogin("cristhianmirandapro@gmail.com","andres1805");
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-
-
-
-
-
 
     @Test
     public void recuperarContrasenaTest() throws Exception {
@@ -62,189 +93,23 @@ public class UsuarioServicioTest {
         }
     }
 
-
-
-
-
-
-    //@Sql("classpath:dataset.sql")
-
-
     @Test
-    public void ejercicio()
-
+    public void listarCompras()
     {
-        ArrayList<Integer> listaNumeros = new ArrayList<Integer>();
-
-        listaNumeros.add(1);
-        listaNumeros.add(2);
-        listaNumeros.add(2);
-        listaNumeros.add(3);
-        listaNumeros.add(3);
-        listaNumeros.add(2);
-        listaNumeros.add(5);
-        listaNumeros.add(5);
-        listaNumeros.add(9);
-        listaNumeros.add(9);
-        listaNumeros.add(9);
-//        System.out.println(numerosRepetidos(listaNumeros,listaNumeros.get(0),"",0,0)+"\n\n\n\n");
-//        System.out.println(agruparNumeros(listaNumeros,listaNumeros.get(0))+"\n\n\n\n");
-
-        int[] numeros = {1,2,2,3,3,2,5,5,9,9,9};
-        Arrays.sort(numeros);
-        System.out.println(pruebaTecnica(numeros));
+        usuarioServicio.listarCompras(1010125168).forEach(System.out::println);
     }
 
-        @Test
-        public void pruebaBuzz()
-        {
-            for(int i=1;i<=100;i++)
-            {
-                if(i%3==0)
-                {
-                    if(i%5==0)
-                    {System.out.println(i+"fizz buzz");}
-                    else{System.out.println(i+"buzz");}
-
-
-                }else if(i%5==0)
-                {
-                    System.out.println(i+"fizz");
-                }else{System.out.println(i);}
-
-            }
-        }
-
-        @Test
-        public String pruebaTecnica(int[] numeros)
-        {
-            int aux=numeros[0];
-            String datos="";
-            int j=0;
-            for(int i=0;i<numeros.length;i++)
-            {
-
-               if(aux==numeros[i])
-               {
-                   j++;
-
-               }else
-               {
-                   System.out.println(aux+" = "+j+"\n");
-                   j=1;
-                   aux=numeros[i];
-               }
-
-            }
-            System.out.println(aux+" = "+j+"\n");
-            return datos;
-        }
-
-
-
-        @Test
-        public String agruparNumeros(ArrayList listaNumeros,int aux)
-        {
-          //  int aux= (int) listaNumeros.get(0);
-            ArrayList<Integer> modificada = new ArrayList<Integer>();
-            for(int i=0;i<=listaNumeros.size();i++)
-            {
-                if(i!=listaNumeros.size()) {
-                    if(listaNumeros.get(i).equals(aux))
-                    {
-                        modificada.add(aux);
-                    }else
-                    {
-                        if(!modificada.isEmpty()) {
-                            System.out.println(imprimirArreglo(modificada));
-                        }
-                        modificada.clear();
-
-                        aux= (int) listaNumeros.get(i);
-                        i--;
-                    }
-
-                }else{
-                    aux= (int) listaNumeros.get(i-1);
-                    return imprimirArreglo(modificada);
-                }
-            }
-            return "";
-        }
-//    @Test
-//    public String prueba(ArrayList listaNumeros,int aux,int j,String lista) {
-//       // String lista="";
-//        ArrayList<Integer> modificada = new ArrayList<Integer>();
-//
-//            if(listaNumeros.get(j).equals(aux))
-//            {
-//                modificada.add(aux);
-//                //lista = listaNumeros.get(j) + " = ";
-//
-//            }else {
-//                lista+=imprimirArreglo(modificada);
-//                System.out.println(lista+"ORYUEBAA");
-//                modificada.clear();
-//                j++;
-//                return prueba(listaNumeros, (Integer) listaNumeros.get(j+1),j+1,lista);
-//            }
-//
-//
-//
-//      return lista;
-//    }
-//    @Test
-//    public String prueba(ArrayList listaNumeros,int i,int aux,String valor,ArrayList modificada)
-//    {
-//        if(i<listaNumeros.size()) {
-//            if (listaNumeros.get(i).equals(aux)) {
-//                modificada.add(aux);
-//                return prueba(listaNumeros, i + 1, aux, "", modificada);
-//            } else {
-//                return prueba(listaNumeros, i, (Integer) listaNumeros.get(i), imprimirArreglo(modificada), modificada);
-//            }
-//        }else {
-//            return "xDDDDDD";
-//        }
-//
-//    }
-
     @Test
-    public String imprimirArreglo(ArrayList lista)
+    public void verificarLoginTest()
     {
-        String valor="";
+        try {
 
-        return  valor+= lista.get(0)+" = "+lista.size()+"\n";
+            usuarioServicio.verificarLogin("cristhianmirandapro@gmail.com","andres12");
 
-
-
-    }
-
-
-
-    @Test
-    public String numerosRepetidos(ArrayList listaNumeros,int aux,String valor,int i,int j)
-    {
-        if(i<listaNumeros.size()) {
-            if (listaNumeros.get(i).equals(aux)) {
-
-                valor = listaNumeros.get(i) + " = ";
-                return numerosRepetidos(listaNumeros, aux, valor, i + 1, j + 1);
-            } else {
-                valor += j + "\n";
-                System.out.println(valor);
-
-                return numerosRepetidos(listaNumeros, (Integer) listaNumeros.get(i), valor, i, 0);
-
-            }
-        }else {
-            return valor+=j;
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-
     }
-
-
-
 
 
 

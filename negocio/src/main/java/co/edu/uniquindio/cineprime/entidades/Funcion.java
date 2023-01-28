@@ -3,6 +3,7 @@ package co.edu.uniquindio.cineprime.entidades;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.Positive;
 import java.io.Serializable;
 import java.util.List;
 
@@ -11,16 +12,21 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@ToString
 public class Funcion implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
     private Integer codigo;
-/*
+
+    @Positive
+    @Column(nullable = false)
+    private Float precio;
+
     @ManyToOne
     @JoinColumn(nullable = false)
-    private Sala sala;
+    private Pelicula pelicula;
 
     @ManyToOne
     @JoinColumn(nullable = false)
@@ -28,14 +34,17 @@ public class Funcion implements Serializable {
 
     @ManyToOne
     @JoinColumn(nullable = false)
-    private Pelicula pelicula;
-*/
+    private Sala sala;
+
     @OneToMany(mappedBy = "funcion")
     private List<Compra> compras;
 
-    public Funcion(Integer codigo, List<Compra> compras) {
-        this.codigo = codigo;
-        this.compras = compras;
+    @Builder
+    public Funcion(Sala sala, Horario horario, Pelicula pelicula) {
+
+        this.sala = sala;
+        this.horario = horario;
+        this.pelicula = pelicula;
     }
     /*
     @Builder
