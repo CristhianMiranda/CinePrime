@@ -3,65 +3,81 @@
     src: url('fuentes_css3/Iceland/Iceland-Regular.ttf') format('truetype');
   }
 
+
+  /*Header de index y demas*/
 header{
-    
+    background: black;
+    padding: 20px 0;
 }
 
 
 .panel{
-    width: 100%;
-    height: 175px;
-    background: black;
-
+    width: auto;
+    height: auto;
 }
+
+.logo-principal{
+    float: left;
+    margin: 1% 1.5%;
+}
+
 
 .pestañas
 {
+    display: inline-flex;
     font-family: 'Iceland';
     font-style: normal;
     font-size: 30px;
+    margin: 3% 5% 2% 5%;
    
 }
 
+.pestañas li{
+    margin: auto 3% auto auto;
+}
 .pestañas a{
     color: #851A1A;
     text-decoration: none;
+    transition: all 0.5s ease;
 }
 .pestañas a:hover{
-    color:white;
-    text-decoration:underline;
+    color:whitesmoke;
+    box-shadow: 15px 15px 50px 10px #851A1A;
 }
 
 #tarjeta-prime:hover{
     color: #851A1A;
-    text-decoration: underline;
     
 }
 
+span {
+    transition: all 0.5s ease;
+ }
+
 .yellow, .white {
     display: inline;
+    transition: box-shadow 0.5s ease;
 }
 
 .yellow {
     color: yellow;
     position: absolute;
     
+    
   }
+
+
   
   .white {
     color: white;
     margin-left: 110px;
   }
 
-
-
 .cambio-color{
     color: gray;
     
 }
 
-#ubicacion{
-}
 
 #registrar {
     cursor: pointer;
@@ -72,45 +88,70 @@ header{
     width: 150px;
     height: 50px;
     font-size: 18px;
-    text-align: center;
-    line-height: 50px;
+    border-color: #851A1A;
+    transition: 1.5s;
+}
+
+
+#registrar:hover{
+    /*
+    text-shadow: 4px 4px 15px #851A1A; 
+    text-shadow: 4px 4px 15px white, 0 0 20px #851A1A; */
+    box-shadow: 0px 0px 23px 10px #851A1A;
+    
+
+    background-color: white;
+    color: gray;
+    border-color: #851A1A;
 }
 
 #iniciar-sesion {
     cursor: pointer;
     color: white;
     background-color: #851A1A;
-    border-radius: 30px;
+    border-radius: 30px ;
+    border-color: goldenrod;
     width: 150px;
     height: 50px;
     font-size: 18px;
+    transition: 1.5s;
 }
 
+#iniciar-sesion:hover{
+    /*
+    text-shadow: 4px 4px 15px #851A1A; 
+    text-shadow: 4px 4px 15px white, 0 0 20px #851A1A; */
+    box-shadow: 0px 0px 23px 10px goldenrod;
+    
+
+    background-color: white;
+    color: #851A1A;
+    border-color: #851A1A;
+}
+
+.header-line {
+    width: auto;
+    height: 10px;
+    
+    background: linear-gradient(black,white);
+}
+/*Fin de header*/
 
 
 
 
-  
-
-
-
-
-
-
-
-
-main{
-    border-top: 5px solid gray;
+/*Main Index**********************************************************************************************************/
+#catalogo{
     margin-bottom: 12em;
 }
 
-h2 {
+.texto-peliculas {
+    text-shadow: 4px 4px 15px #851A1A, 0 0 20px black; /* sombra de texto */
     text-align: center;
     font-size: 2.5em;
     margin: 2em 0;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #ffa600;
+    font-family: 'Iceland';
   }
   
 /* Estilos comunes para todas las películas */
@@ -118,7 +159,7 @@ h2 {
     width: 80%;
     margin: 0 auto;
     padding: 1em;
-    background-color: #f5f5f5;
+    background-color: whitesmoke;
     border-radius: 8px;
   }
   
@@ -166,7 +207,101 @@ h2 {
   .boton-entradas:hover {
     background-color: #ff8c00;
   }
-  
+  /*Fin main index************************************************************************************************************/
+
+
+
+
+
+
+  #registro{
+    display: inline-block;
+    width: 100%;
+    height: 45em;
+    background: url(logos/fondo.jpg); /*imagen de fondo*/
+    background-size: cover; /*ajusta la imagen de fondo al tamaño del contenedor*/
+    
+}
+
+#terminos{
+}
+
+
+
+
+h2 {
+    text-shadow: 4px 4px 15px white, 0 0 20px #851A1A; /* sombra de texto */
+    text-align: center;
+    font-size: 2.5em;
+    margin: 2em 0;
+    letter-spacing: 2px;
+    color: #FFD700; /* color dorado */
+    font-family: 'Iceland';
+}
+
+
+  form {
+    text-align: center;
+}
+
+form label{
+    display:block;
+    font-size: 25px;
+    
+    font-family: 'Iceland';
+    
+    color: white;
+
+    text-shadow: 4px 4px 15px #851A1A; /* sombra de texto */
+    text-shadow: 4px 4px 15px white, 0 0 20px #851A1A; /* sombra de texto */
+    /*
+    
+     
+
+    */
+}
+
+form input{
+    
+    margin: 0 0 0 0;
+
+    border: 2px solid black; /*borde*/
+    border-radius: 10px; /* radio de los bordes*/
+    width: 15%; /*ancho del input*/
+    padding: 10px; /*espacio interior */
+    outline: none; /*elimina el borde predeterminado*/
+    box-shadow: 0 0 10px 1px red; /*sombra alrededor del input*/
+}
+
+.enviar{
+    display: block;
+    text-align: center;
+    margin-left: 42.5%;
+    background-color: black; /*color de fondo*/
+    color: white; /*color de letra*/
+    
+    border: 2px solid red; /*borde*/
+    font-size: 25px; /*tamaño de letra*/
+    
+    border-radius: 15px; /* radio de los bordes redondos*/
+    padding: 0; /*espacio interior */
+    font-weight: bold; /*grosor de letra */
+
+    height: 40px; /*alto del input*/
+    
+    font-family: 'Iceland';
+}
+
+.formulario{
+    margin: 4% 0 5% 1%;
+    color: white;
+    text-shadow: 4px 4px 15px #851A1A; /* sombra de texto */
+    text-shadow: 4px 4px 15px black, 0 0 1px #851A1A; /* sombra de texto */
+    text-align: center;
+    font-family: 'Iceland';
+    font-style: normal;
+    font-size: 40px;
+}
 
 
 
@@ -175,30 +310,54 @@ h2 {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Footer de index y demas*/
+
+  .footer-line {
+    width: auto;
+    height: 10px;
+    background: linear-gradient(white, black);
+  }
 
 
 
   footer{
-    border-top: 5px solid gray;
+    background: black;
 }
 
 .pie-pagina{
-    background: black;
-    display: flex;
+    width: auto;
+    height: auto;
 }
 
 #logo-pie-pagina{
-    width: 412px;
-    height: 233px;
-    left: -51px;
-    top: 3175px;
-    
+   
+    float: left;
 }
 
 .legal li{
     
 
-    margin-top: 100px;
+    margin-top: 2%;
+    margin-left: 3.8%;
     display: inline-block;
     font-family: 'Iceland';
     font-style: normal;
@@ -221,19 +380,72 @@ h2 {
 }
 
 #copyright{
-    display: grid;
-    margin-left: 450px;
+    display: block;
+    text-align: center;
     /*place-items: center;*/
 }
 
-
+/*Fin de footer*/
 
 
 
 
 @media screen and (max-width:480px) {
-  
     
+    .logo-principal{
+        margin: 1% 0 0 0;
+        float: left;
+    }
+    .pestañas{
+        display: block;
+        font-size: 1.5em;
+        text-align: center;
+    }
+    #ubicacion{
+        display: none;
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    #registrar{
+        width: 30%;
+        height: 2em;
+        float: left;
+        
+    font-family: 'Iceland';
+    }
+    #iniciar-sesion{
+        width: 30%;
+        height: 2em;
+        float: right;
+        
+    font-family: 'Iceland';
+    }
+
+    #registrar,#iniciar-sesion{
+        
+    }
+   .yellow{
+    margin-left: 4%;
+   }
+
+
+   .pie-pagina{
+    text-align: center;
+   }
+   #logo-pie-pagina{
+    margin-left: 26%;
+   }
+
+   .legal li{
+        font-size: 1.3em;
+        margin-top: 0;
+        margin-left: 22%;
+   }
+
+
+
+
 }
 
 
