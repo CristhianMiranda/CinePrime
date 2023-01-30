@@ -467,6 +467,10 @@ form input{
         margin-left: 22%;
    }
 
+   #registro{
+    height: 30.2em;
+   }
+
    form input{
     width: 50%;
    }
