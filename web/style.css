@@ -3,7 +3,10 @@
     src: url('fuentes_css3/Iceland/Iceland-Regular.ttf') format('truetype');
   }
 
-
+.index
+{
+    transition: 5s;
+}
   /*Header de index y demas*/
 header{
     background: black;
@@ -14,6 +17,7 @@ header{
 .panel{
     width: auto;
     height: auto;
+    
 }
 
 .logo-principal{
@@ -464,7 +468,7 @@ form input{
    .legal li{
         font-size: 1.3em;
         margin-top: 0;
-        margin-left: 22%;
+        margin-left: 24%;
    }
 
    #registro{
