@@ -10,11 +10,12 @@
   /*Header de index y demas*/
 header{
     background: black;
-    padding: 20px 0;
+   /* padding: 20px 0;*/
 }
 
 
 .panel{
+    display: flex;
     width: auto;
     height: auto;
     
@@ -22,17 +23,22 @@ header{
 
 .logo-principal{
     float: left;
-    margin: 1% 1.5%;
+    margin: 0 55.5%;
 }
-
+.navegacion
+{
+    display: flex;
+}
 
 .pestañas
 {
-    display: inline-flex;
+    top: 10%;
+    left: 18%;
+    position: relative;
+    display: flex;
     font-family: 'Iceland';
     font-style: normal;
     font-size: 30px;
-    margin: 3% 5% 2% 5%;
    
 }
 
@@ -78,11 +84,63 @@ span {
   }
 
 .cambio-color{
+    display: flex;
     color: gray;
     
 }
 
+#ubicacion-caja{
+    display: flex;
+    margin-right: 4%;
+    margin-top: 1%;
+}
+#ubicacion{
+    float: right;
 
+}
+
+
+
+form {
+    display: flex;
+    align-items: center;
+    width: 334%;
+    margin: 0 auto;
+  }
+  
+  input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    border-right: 1px solid #bbb;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  button[type="submit"] {
+    width: 22%;
+    padding: 10px;
+    font-size: 16px;
+    /*background-color: lightblue;*/
+    color: transparent;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    cursor: pointer;
+
+    box-shadow: 0px 0px 23px 10px #851A1A;
+
+    background-image: url('logos/lupa.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #opciones
+{
+    display: inline;
+    margin-left: 17%;
+}
 #registrar {
     cursor: pointer;
     
@@ -133,6 +191,7 @@ span {
     border-color: #851A1A;
 }
 
+
 .header-line {
     width: auto;
     height: 10px;
@@ -145,15 +204,30 @@ span {
 
 
 /*Main Index**********************************************************************************************************/
+main{
+    width: 100%;
+    height: 100%;
+    background: wheat;
+}
+#response{
+
+    color: black;
+    font-family: 'Terminal';
+    font-size: 2em;
+    text-shadow: 4px 4px 15px #00FF00; 
+    text-align: left;
+    margin-right: 10%;
+    margin-top: 10%;
+    margin-left: 7%;
+
+  }
 #catalogo{
-    margin-bottom: 12em;
 }
 
 .texto-peliculas {
     text-shadow: 4px 4px 15px #851A1A, 0 0 20px black; /* sombra de texto */
     text-align: center;
     font-size: 2.5em;
-    margin: 2em 0;
     text-transform: uppercase;
     font-family: 'Iceland';
   }
@@ -237,7 +311,6 @@ h2 {
     text-shadow: 4px 4px 15px white, 0 0 20px #851A1A; /* sombra de texto */
     text-align: center;
     font-size: 2.5em;
-    margin: 2em 0;
     letter-spacing: 2px;
     color: #FFD700; /* color dorado */
     font-family: 'Iceland';
