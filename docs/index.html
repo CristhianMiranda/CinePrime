@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="reset.css">
         <link rel="stylesheet" href="style.css">    
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://unpkg.com/colorthief@2.2.0/dist/color-thief.min.js"></script>
+
 
 
     </head>           
@@ -89,31 +91,31 @@
         <div class="header-line"></div>
         <main id="catalogo">
         
-            <!--
-            <h2 class="texto-peliculas">Últimas películas en cartelera</h2>
-            <section class="pelicula" id="pelicula-1">
-              <h3 class="titulo-pelicula">Avengers: Endgame</h3>
-              <img class="imagen-pelicula" src="fotospruebas/avengers-endgame.png" alt="Avengers: Endgame">
-              <p class="descripcion-pelicula">Después de los eventos devastadores de "Avengers: Infinity War", el universo está en ruinas debido a las acciones del poderoso Thanos. Con la ayuda de los aliados restantes, los Avengers deben reunirse una vez más para deshacer sus acciones y restaurar el orden en el universo.</p>
-              <button class="boton-entradas">Comprar entradas</button>
-            </section>
-            <section class="pelicula" id="pelicula-2">
-              <h3 class="titulo-pelicula">Joker</h3>
-              <img class="imagen-pelicula" src="fotospruebas/joker.png" alt="Joker">
-              <p class="descripcion-pelicula">Arthur Fleck es un hombre ignorado por la sociedad, cuya motivación en la vida es hacer reír a la gente. Sin embargo, una serie de trágicos acontecimientos lo llevarán a un camino de violencia y locura, convirtiéndose en el icónico criminal conocido como Joker.</p>
-              <button class="boton-entradas">Comprar entradas</button>
-            </section>
-            -->
+            <div id="determinado">
+                <h2 class="texto-peliculas">Últimas películas en cartelera</h2>
+                <section class="pelicula" id="pelicula-1">
+                <h3 class="titulo-pelicula">Avengers: Endgame</h3>
+                <img class="imagen-pelicula" src="fotospruebas/avengers-endgame.png" alt="Avengers: Endgame">
+                <p class="descripcion-pelicula">Después de los eventos devastadores de "Avengers: Infinity War", el universo está en ruinas debido a las acciones del poderoso Thanos. Con la ayuda de los aliados restantes, los Avengers deben reunirse una vez más para deshacer sus acciones y restaurar el orden en el universo.</p>
+                <button class="boton-entradas">Comprar entradas</button>
+                </section>
+                <section class="pelicula" id="pelicula-2">
+                <h3 class="titulo-pelicula">Joker</h3>
+                <img class="imagen-pelicula" src="fotospruebas/joker.png" alt="Joker">
+                <p class="descripcion-pelicula">Arthur Fleck es un hombre ignorado por la sociedad, cuya motivación en la vida es hacer reír a la gente. Sin embargo, una serie de trágicos acontecimientos lo llevarán a un camino de violencia y locura, convirtiéndose en el icónico criminal conocido como Joker.</p>
+                <button class="boton-entradas">Comprar entradas</button>
+                </section>
+            </div>
             <div >
                 <p id="response"></p>
             </div>
             
         </main>
 
-        
+         <!--
         <div class="footer-line"></div>
         
-
+       
         <footer>
             <div class="pie-pagina">
 
@@ -131,7 +133,7 @@
                 </nav>
             </div>
         </footer>
-
+        -->
         <script src="scripts/metodos.js"></script>
 
 

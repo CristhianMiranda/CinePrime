@@ -3,6 +3,16 @@
     src: url('fuentes_css3/Iceland/Iceland-Regular.ttf') format('truetype');
   }
 
+  @font-face {
+    font-family: 'Iceberg';
+    src: url('fuentes_css3/Iceberg/Iceberg-Regular.ttf');
+  }
+
+  @font-face {
+    font-family: 'Inconsolata';
+    src: url('fuentes_css3/Inconsolata/Inconsolata-VariableFont_wdth\,wght.ttf');
+  }
+
 .index
 {
     transition: 5s;
@@ -207,19 +217,42 @@ form {
 main{
     width: 100%;
     height: 100%;
-    background: wheat;
+    background-color: black;
 }
 #response{
+  flex-wrap: wrap;
+    /*text-align: center;*/
+    display: flex;
+   /* margin: 4% 3%;*/
 
     color: black;
     font-family: 'Terminal';
     font-size: 2em;
-    text-shadow: 4px 4px 15px #00FF00; 
-    text-align: left;
-    margin-right: 10%;
+    /*text-shadow: 4px 4px 15px #00FF00; 
+    text-align: left;*/
+   /* margin-right: 10%;
     margin-top: 10%;
-    margin-left: 7%;
+    margin-left: 7%;*/
 
+  }
+  #diseno-pelicula
+  {
+    width: 40%;
+    height: auto;
+    margin-inline: 7% 0%;
+    margin-block: 10%;
+    
+    /*margin-inline: 7% 0%;*/
+   /* margin-right: 4.5%;
+    border-radius: 6%;*/
+  }
+  #miniatura-pelicula{
+    width: 44%;
+    height: 80%;
+    border-radius: 6.8%;
+    object-fit: cover;
+    border: 5px black solid;
+    /*float: left;*/
   }
 #catalogo{
 }
@@ -252,9 +285,15 @@ main{
   
   /* Estilos para el título de la película */
   .titulo-pelicula {
-    font-size: 2em;
+    font-family: 'Iceberg';
+    /*font-size: 1.5em;*/
     font-weight: bold;
-    margin-bottom: 0.5em;
+  }
+  .sipnosis-pelicula{
+    width: inherit;
+    font-family: 'Inconsolata';
+    font-size: 1em;
+
   }
   
   /* Estilos para la imagen de la película */

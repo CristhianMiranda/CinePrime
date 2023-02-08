@@ -1,3 +1,122 @@
+
+
+
+
+
+document.getElementById("api").addEventListener("click", function(event) {
+  event.preventDefault();
+  let searchTerm = document.getElementById("searchTerm").value;
+  axios.get(`http://localhost:8080/api/browser/${searchTerm}`)
+  .then(response => {
+    document.getElementById("determinado").style.display="none";  
+    let responseContainer = document.getElementById("response");
+    let peliculas = response.data;
+    let resultados = '';
+    peliculas.forEach(pelicula => {
+      resultados += `
+        <div id="diseno-pelicula">
+        <!--<p class="estilo">Estado: ${pelicula.estado}</p>-->
+        <img id = "miniatura-pelicula"src="${pelicula.url_Imagen}" alt="Image">
+        
+        <p class="titulo-pelicula">${pelicula.nombre}</p>
+        <p class="sipnosis-pelicula">${pelicula.sipnosis}</p>
+        
+       <!--<p class="estilo">Reparto: ${pelicula.reparto}</p>-->
+        <br>
+        </div>
+      `;
+    });
+    responseContainer.innerHTML = resultados;
+
+    let randomColor = function () {
+      let r = Math.floor(Math.random() * 256);
+      let g = Math.floor(Math.random() * 256);
+      let b = Math.floor(Math.random() * 256);
+      return "rgb(" + r + "," + g + "," + b + ")";
+    };
+
+    let images = document.querySelectorAll("#miniatura-pelicula");
+    images.forEach(function(image) {
+      image.style.boxShadow = "0px 255px 183px 12px " + randomColor();
+    });
+  })
+  .catch(error => {
+    console.error('Ha ocurrido un error:', error);
+  });
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+  document.addEventListener("DOMContentLoaded", function () {
+    let randomColor = function () {
+      let r = Math.floor(Math.random() * 256);
+      let g = Math.floor(Math.random() * 256);
+      let b = Math.floor(Math.random() * 256);
+      return "rgb(" + r + "," + g + "," + b + ")";
+    };
+  
+    document.getElementById("miniatura-pelicula").style.boxShadow =
+      "0 209px 87px 10px " + randomColor();
+  });
+
+
+*/
+
+
+  
+
+
 /*document.getElementById("api").addEventListener("click", function(event) {
     event.preventDefault();
     let searchTerm = document.getElementById("searchTerm").value;
@@ -27,6 +146,30 @@
   });
 
 */
+
+
+
+
+
+
+
+
+/*
+import ColorThief from 'colorthief';
+
+document.addEventListener("DOMContentLoaded", function () {
+  let images = document.querySelectorAll("#miniatura-pelicula");
+  images.forEach(async (img) => {
+    let colorThief = new ColorThief();
+    let dominantColor = await colorThief.getColor(img.src);
+    img.style.boxShadow = `0 209px 87px 10px rgb(${dominantColor[0]},${dominantColor[1]},${dominantColor[2]})`;
+  });
+});
+
+
+
+
+
   document.getElementById("api").addEventListener("click", function(event) {
     event.preventDefault();
     let searchTerm = document.getElementById("searchTerm").value;
@@ -37,16 +180,16 @@
       let resultados = '';
       peliculas.forEach(pelicula => {
         resultados += `
-          <p>Código: ${pelicula.codigo}</p>
-          <p>Nombre: ${pelicula.nombre}</p>
-          <p>Sinopsis: ${pelicula.sipnosis}</p>
-          <iframe width="560" height="315" src="${pelicula.url_Trailer}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <!--<p>URL del trailer: ${pelicula.url_Trailer}</p>-->
-          <img src="${pelicula.url_Imagen}" alt="Image">
-          <!--<p>URL de la imagen: ${pelicula.url_Imagen}</p>-->
-          <p>Estado: ${pelicula.estado}</p>
-          <p>Reparto: ${pelicula.reparto}</p>
+          <div id="diseno-pelicula">
+          <!--<p class="estilo">Estado: ${pelicula.estado}</p>-->
+          <img id = "miniatura-pelicula"src="${pelicula.url_Imagen}" alt="Image">
+          
+          <p class="titulo-pelicula">${pelicula.nombre}</p>
+          <p class="sipnosis-pelicula">${pelicula.sipnosis}</p>
+          
+         <!--<p class="estilo">Reparto: ${pelicula.reparto}</p>-->
           <br>
+          </div>
         `;
       });
       responseContainer.innerHTML = resultados;
@@ -56,3 +199,5 @@
     });
 
   });
+
+*/
