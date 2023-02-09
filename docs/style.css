@@ -227,7 +227,7 @@ main{
 
     color: black;
     font-family: 'Terminal';
-    font-size: 2em;
+    font-size: 1.6em;
     /*text-shadow: 4px 4px 15px #00FF00; 
     text-align: left;*/
    /* margin-right: 10%;
@@ -246,6 +246,10 @@ main{
    /* margin-right: 4.5%;
     border-radius: 6%;*/
   }
+  img#estado {
+    position: absolute;
+    left: 5%;
+}
   #miniatura-pelicula{
     width: 44%;
     height: 80%;
@@ -253,7 +257,9 @@ main{
     object-fit: cover;
     border: 5px black solid;
     /*float: left;*/
+    
   }
+
 #catalogo{
 }
 
@@ -285,6 +291,7 @@ main{
   
   /* Estilos para el título de la película */
   .titulo-pelicula {
+    text-shadow: 0 0 firebrick;
     font-family: 'Iceberg';
     /*font-size: 1.5em;*/
     font-weight: bold;
@@ -293,6 +300,8 @@ main{
     width: inherit;
     font-family: 'Inconsolata';
     font-size: 1em;
+    color: whitesmoke;
+   /* text-shadow: 4px 4px 15px white, 0 0 20px #851a1a;*/
 
   }
   

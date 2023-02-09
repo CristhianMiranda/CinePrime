@@ -12,19 +12,71 @@ document.getElementById("api").addEventListener("click", function(event) {
     let responseContainer = document.getElementById("response");
     let peliculas = response.data;
     let resultados = '';
+
     peliculas.forEach(pelicula => {
-      resultados += `
-        <div id="diseno-pelicula">
-        <!--<p class="estilo">Estado: ${pelicula.estado}</p>-->
-        <img id = "miniatura-pelicula"src="${pelicula.url_Imagen}" alt="Image">
+
+
+    
+
+
+      switch(pelicula.estado)
+      {
+        case "Estreno":
+          resultados += `
+          <div id="diseno-pelicula">
+          <img id = "estado" src="logos/Estreno.png">
+          <!--<p class="estilo">Estado: ${pelicula.estado}</p>-->
+          <img id = "miniatura-pelicula"src="${pelicula.url_Imagen}" alt="Image">
+          
+          <p class="titulo-pelicula">${pelicula.nombre}</p>
+          <p class="sipnosis-pelicula">${pelicula.sipnosis}</p>
+          
+          <!--<p class="estilo">Reparto: ${pelicula.reparto}</p>-->
+            <br>
+            </div>
+          `;
+
+        break;
+
+        case "Pre-estreno":
+          resultados += `
+          <div id="diseno-pelicula">
+          <img id = "estado" src="logos/Estreno.png">
+          <!--<p class="estilo">Estado: ${pelicula.estado}</p>-->
+          <img id = "miniatura-pelicula"src="${pelicula.url_Imagen}" alt="Image">
+          
+          <p class="titulo-pelicula">${pelicula.nombre}</p>
+          <p class="sipnosis-pelicula">${pelicula.sipnosis}</p>
+          
+          <!--<p class="estilo">Reparto: ${pelicula.reparto}</p>-->
+            <br>
+            </div>
+          `;
         
-        <p class="titulo-pelicula">${pelicula.nombre}</p>
-        <p class="sipnosis-pelicula">${pelicula.sipnosis}</p>
+          break;
+
+        default:
+          resultados += `
         
-       <!--<p class="estilo">Reparto: ${pelicula.reparto}</p>-->
-        <br>
-        </div>
-      `;
+          <div id="diseno-pelicula">
+          <!--<p class="estilo">Estado: ${pelicula.estado}</p>-->
+          <img id = "miniatura-pelicula"src="${pelicula.url_Imagen}" alt="Image">
+          
+          <p class="titulo-pelicula">${pelicula.nombre}</p>
+          <p class="sipnosis-pelicula">${pelicula.sipnosis}</p>
+          
+         <!--<p class="estilo">Reparto: ${pelicula.reparto}</p>-->
+          <br>
+          </div>
+        `;
+      
+      }
+
+
+      
+      
+      
+      
     });
     responseContainer.innerHTML = resultados;
 
