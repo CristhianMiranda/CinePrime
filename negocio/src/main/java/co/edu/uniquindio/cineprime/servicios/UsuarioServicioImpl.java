@@ -94,6 +94,13 @@ public class UsuarioServicioImpl implements UsuarioServicio {
         return peliculasCoincididas;
 
     }
+
+
+    public ArrayList<Pelicula> listarPeliculas()
+    {
+        return (ArrayList<Pelicula>) peliculaRepo.listarPeliculas();
+    }
+
     public int cantidadEspacios(String cadena)
     {
         int aux=0;

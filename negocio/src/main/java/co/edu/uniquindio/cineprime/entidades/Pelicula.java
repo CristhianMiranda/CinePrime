@@ -1,10 +1,13 @@
 package co.edu.uniquindio.cineprime.entidades;
 
 import lombok.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
+import java.text.DateFormat;
+import java.util.Date;
 
 @Entity
 @NoArgsConstructor
@@ -24,6 +27,27 @@ public class Pelicula implements Serializable {
     @NotBlank
     @ToString.Include
     private String nombre;
+
+
+    @Temporal(TemporalType.DATE)
+    @Column(nullable = false)
+    @NotBlank
+   /* @DateTimeFormat(pattern = "dd-MMM-yyyy")*/
+    private Date estreno;
+
+    @NotBlank
+    @Enumerated(EnumType.ORDINAL)
+    @Column(nullable = false)
+    private Genero genero;
+
+
+    @NotBlank
+    @Column(nullable = false)
+    private int restriccionEdad;
+
+    @NotBlank
+    @Column(nullable = false)
+    private int duracionPelicula;
 
     @Column(nullable = false)
     @NotBlank

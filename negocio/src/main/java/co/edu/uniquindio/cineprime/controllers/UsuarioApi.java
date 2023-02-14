@@ -26,4 +26,9 @@ public class UsuarioApi {
     public ArrayList<Pelicula> buscador(@PathVariable ("nombre") String nombre) throws Exception {
         return usuarioServicio.encontrarPeliculas(nombre);
     }
+
+    @GetMapping("/browser/cartelera")
+    public ArrayList<Pelicula> listarPeliculas() throws Exception {
+        return usuarioServicio.listarPeliculas();
+    }
 }

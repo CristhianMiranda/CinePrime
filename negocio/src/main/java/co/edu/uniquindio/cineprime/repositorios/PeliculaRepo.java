@@ -21,6 +21,12 @@ public interface PeliculaRepo extends JpaRepository<Pelicula,String> {
     List<Pelicula> listarPeliculas();
 
 
+    /*
+    * @Query("select p from Pelicula p ORDER BY CASE WHEN p.estado ='Pre-estreno' THEN 1" +
+            " WHEN p.estado = 'Estreno' THEN 2" +
+            "ELSE 3 END,p.estado")*/
+
+
 
 
 

@@ -227,7 +227,6 @@ main{
 
     color: black;
     font-family: 'Terminal';
-    font-size: 1.6em;
     /*text-shadow: 4px 4px 15px #00FF00; 
     text-align: left;*/
    /* margin-right: 10%;
@@ -236,30 +235,78 @@ main{
 
   }
   #diseno-pelicula
+  
   {
-    width: 40%;
-    height: auto;
+    position: relative;
+  display: inline-block;
+    font-size: 1em;
+    
     margin-inline: 7% 0%;
     margin-block: 10%;
+    
+    transition: 0.5s ease-in-out opacity;
+    cursor: pointer;
     
     /*margin-inline: 7% 0%;*/
    /* margin-right: 4.5%;
     border-radius: 6%;*/
   }
+  #diseno-pelicula:hover{
+    opacity: 30%;
+    color: white;
+    
+  }
+  
+  #diseno-pelicula .icon {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    border-radius: 50%;
+    color: white;
+    font-size: 20px;
+    opacity: 0;
+    transition: 0.5s ease-in-out opacity;
+  }
+
+  #diseno-pelicula:hover .icon{
+    opacity: 1;
+  }
+
+  #diseno-pelicula #miniatura-pelicula{
+    width: 420px;
+    height: 534px;
+  }
+  
+
+
   img#estado {
     position: absolute;
-    left: 5%;
+    /* left: 65%; */
+    /* left: 5%; */
+    margin-left: -7.9%;
 }
+
+  
+
   #miniatura-pelicula{
     width: 44%;
     height: 80%;
     border-radius: 6.8%;
     object-fit: cover;
     border: 5px black solid;
+    transition: 1s ease-in opacity;
     /*float: left;*/
     
   }
 
+ 
 #catalogo{
 }
 
@@ -293,8 +340,26 @@ main{
   .titulo-pelicula {
     text-shadow: 0 0 firebrick;
     font-family: 'Iceberg';
-    /*font-size: 1.5em;*/
+    font-size: 2.4em;
     font-weight: bold;
+  }
+
+  .informacion-pelicula{
+    font-weight: bold;
+    font-size: 1.8em;
+    font-family: 'Iceberg';
+    text-shadow: 0 0 white;
+
+  }
+  .advertencia-pelicula{
+    font-size: 1.59em;
+    font-family: 'Iceland';
+    border: solid lightgray;
+    width: 100%;
+    background-color: lightgray;
+    /*text-shadow: 0 0 white;*/
+    font-weight: bold;
+
   }
   .sipnosis-pelicula{
     width: inherit;

@@ -10,6 +10,8 @@ public interface    UsuarioServicio {
 
     ArrayList<Pelicula> encontrarPeliculas(String nombre) throws Exception;
 
+    ArrayList<Pelicula> listarPeliculas();
+
     /**
      * Método para registrar usuario
      * @param cedula Es la id del usuario este debe ser único
