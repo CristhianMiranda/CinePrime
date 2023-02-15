@@ -19,7 +19,7 @@ function convertMinutesToHoursAndMinutes(minutes) {
 document.getElementById("api").addEventListener("click", function(event) {
   event.preventDefault();
   let searchTerm = document.getElementById("searchTerm").value;
-  axios.get(`http://localhost:8080/api/browser/${searchTerm}`)
+  axios.get(`http://18.206.202.118:8080/api/browser/${searchTerm}`)
   .then(response => {
     document.getElementById("determinado").style.display="none";  
     let responseContainer = document.getElementById("response");
@@ -168,7 +168,7 @@ document.getElementById("api").addEventListener("click", function(event) {
 document.getElementById("lista").addEventListener("click", function(event) {
   event.preventDefault();
   let searchTerm = document.getElementById("searchTerm").value;
-  axios.get(`http://localhost:8080/api/browser/cartelera`)
+  axios.get(`http://18.206.202.118:8080/api/browser/cartelera`)
   .then(response => {
     document.getElementById("determinado").style.display="none";  
     let responseContainer = document.getElementById("response");

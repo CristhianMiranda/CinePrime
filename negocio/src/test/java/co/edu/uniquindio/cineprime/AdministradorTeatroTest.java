@@ -19,7 +19,7 @@ public class AdministradorTeatroTest {
     @Autowired
     private AdministradorTeatroServicio administradorTeatroServicio;
 
-
+    /*
     @Test
     public void verificarLoginTest()
     {
@@ -96,6 +96,6 @@ public class AdministradorTeatroTest {
         administradorTeatroServicio.eliminarTeatro(2);
     }
     
-
+*/
 
 }

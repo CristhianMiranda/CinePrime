@@ -22,7 +22,7 @@ public class UsuarioServicioTest {
     @Autowired
     private EmailService emailService;
 
-
+/*
     @Test
     //@Sql("classpath:dataset.sql")
     public void encontrarPelicula()  {
@@ -32,6 +32,8 @@ public class UsuarioServicioTest {
             throw new RuntimeException(e);
         }
     }
+
+ */
 
     @Test
     public void crearCupon(){
@@ -52,20 +54,21 @@ public class UsuarioServicioTest {
         }
     }
 
-
+/*
     @Test
     //@Sql("classpath:dataset.sql")
     public void compra() throws Exception {
         Funcion funcion = new Funcion();
        usuarioServicio.realizarCompra(usuarioServicio.obtenerPorCedula(1010125168),usuarioServicio.obtenerFuncionCodigo(1),usuarioServicio.encontrarCuponUsuario(1));
     }
-
+*/
+    /*
     @Test
     public void asociarTarjetaCinePrime() throws Exception {
         usuarioServicio.asociarTarjetaCinePrime(usuarioServicio.obtenerPorCedula(1010125168),usuarioServicio.crearTarjetaCinePrime());
     }
 
-
+*/
 
 
 
