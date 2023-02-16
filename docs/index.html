@@ -18,65 +18,65 @@
 
     <body>
        
-        <header>
-            <div class="panel">
+        <header class="headerPrincipal"> 
+            <div class="container">
+                <h1 class="headerPrincipal-logo">
+                    <a href="index.html"><img  src="logos/CinePrimeLogoSinBordes.png"></a>
+                </h1>
+                <nav class="headerPrincipal-nav">
+                    <a class="headerPrincipal-nav-textoRojo" href="index.html">CARTELERA</a>
+                    <a class="headerPrincipal-nav-textoRojo" href="index.html">CONFITERIA</a>
+                    <a class="headerPrincipal-nav-textoRojo" href="index.html">PROMOCIONES</a>
+                    <a id="tarjeta-prime" href="index.html">
+                        <span class="yellow">TARJETA</span>
+                        <span class="white">PRIME</span>
+                    </a>
+                    <a id="ubicacion" href="index.html">
+                        <span class="ubicacion-union">
+                            ARMENIA 
+                        </span>
 
-                <h1><a href="index.html"><img class="logo-principal" src="logos/CinePrimeLogoSinBordes.png"></a></h1>
+                        <span >
+                            <img class="imagen-ubicacion" src="logos/ubicacion.png">
+                        </span>
+                        
+                    </a>
 
-                <nav class="navegacion">
-                    <ul class="pestañas">
+                    
+                        <a>
+                        <form class="input-busqueda">
+                            <!--<input type="text" id="buscar" spellcheck="false" placeholder="Buscar">-->
+                            <img id="lupa" src="logos/lupa-rojo.png">
+                            
+                            <!--<button id="api"type="submit" >Submit</button>-->
+                        </form>
+                        </a>
+                    
+                        <input type="text" id="buscar" spellcheck="false" placeholder="Buscar">
 
-                        <li><a id="lista" href="index.html">CARTELERA</a></li>
-                        <li><a href="index.html">CONFITERIA</a></li>
-                        <li><a href="index.html">PROMOCIONES</a></li>
-                        <li><a id="tarjeta-prime" href="index.html">
-                            <span class="yellow">TARJETA</span>
-                            <span class="white">PRIME</span>
-                            </a>
-                        </li>
-                        <div id="ubicacion-caja">
-                            <li>
-                                <a class="seleccionar-ciudad" href="https://www.youtube.com">
-                                    <span class="cambio-color">
-                                        Armenia
-                                        <img id="ubicacion" src="logos/ubicacion.png">        
-                                    </span>
-                                </a>
-                                
-                            </li>
-                            <!--<li>
-                                <a class="seleccionar-ciudad" href="https://www.youtube.com">
-                                    <span><img id="ubicacion" src="logos/ubicacion.png"></span>
-                                </a>
-                            </li>-->
-                        </div>
-                        <li>
-                            <form>
-                                <input type="text" id="searchTerm" spellcheck="false" placeholder="Buscar">
-                                <button id="api"type="submit" >Submit</button>
-                            </form>
-                                
-                        </li>
-                        <div id="opciones">
-                            <ul >
-                                <li><a href="registrar_usuario.html">
-                                    <button id="registrar">
-                                        Registrarse
-                                    </button>
-                                    </a>
-                                </li>
-                                <li><a href="https://www.google.com">
-                                    <button id="iniciar-sesion">
-                                        Iniciar sesión
-                                    </button>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </ul>
+                    
+
+                    
+                    
+
                 </nav>
+                <div class="ingreso-usuario">
+                    <a href="index.html">
+                        <button id="registrar">
+                            Registrarse
+                        </button>
+                    </a>
 
+                    <a href="index.html">
+                        <button id="iniciar-sesion">
+                            Iniciar sesión
+                        </button>
+                    </a>
+                </div>
             </div>
+
+            
+            
             
                 
              

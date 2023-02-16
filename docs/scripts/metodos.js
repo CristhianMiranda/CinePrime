@@ -13,87 +13,69 @@ function convertMinutesToHoursAndMinutes(minutes) {
   return hours + " hrs y " + remainingMinutes + " min";
 }
 
+const lupa = document.querySelector('#lupa');
+const buscador = document.querySelector('#buscar');
+/*lupa.addEventListener('click', () => {
+  buscador.style.pointerEvents = 'auto';
+  buscador.style.opacity = 1;
+  lupa.style.transform = 'translateX(230%)';
+});*/
 
-
-
-document.getElementById("api").addEventListener("click", function(event) {
-  event.preventDefault();
-  let searchTerm = document.getElementById("searchTerm").value;
-  axios.get(`http://18.206.202.118:8080/api/browser/${searchTerm}`)
-  .then(response => {
-    document.getElementById("determinado").style.display="none";  
-    let responseContainer = document.getElementById("response");
-    let peliculas = response.data;
-    let resultados = '';
-
-    peliculas.forEach(pelicula => {
-
-
-    
-      let fecha = convertirFecha(pelicula.estreno);
-      let duracion = convertMinutesToHoursAndMinutes(pelicula.duracionPelicula);
-      console.log(pelicula.estado);
-      console.log(pelicula.estado==='Pre-estreno');
-      switch(pelicula.estado)
-      {
-        
-        case 'Estreno':
-          console.log(pelicula.estado);
-          resultados += `
-          <div id="diseno-pelicula">
+if (buscador.value.trim() !== '') {
+  
+  document.getElementById("lista").addEventListener("click", function(event) {
+    event.preventDefault();
+    let searchTerm = document.getElementById("searchTerm").value;
+    axios.get(`http://localhost:8080/api/browser/${buscar}`)
+    .then(response => {
+      document.getElementById("determinado").style.display="none";  
+      let responseContainer = document.getElementById("response");
+      let peliculas = response.data;
+      let resultados = '';
+  
+      peliculas.forEach(pelicula => {
+  
+  
+      
+        let fecha = convertirFecha(pelicula.estreno);
+        let duracion = convertMinutesToHoursAndMinutes(pelicula.duracionPelicula);
+        console.log(pelicula.estado);
+        console.log(pelicula.estado==='Pre-estreno');
+        switch(pelicula.estado)
+        {
           
-          <div class="icon">+</div>
-          <img id = "estado" src="logos/Estreno.png">
-          <!--<p class="estilo">Estado: ${pelicula.estado}</p>-->
-          <img id = "miniatura-pelicula"src="${pelicula.url_Imagen}" alt="Image">
-          
-          <p class="titulo-pelicula">${pelicula.nombre}</p>
-          <p class="informacion-pelicula">Estreno: ${fecha}</p>
-          <p class="informacion-pelicula">Género: ${pelicula.genero}</p>
-          <p class="advertencia-pelicula">Recomendada para Mayores de ${pelicula.restriccionEdad} años</p>
-          <p class="advertencia-pelicula">Duración: ${duracion}</p>
-          
-          <!--<p class="sipnosis-pelicula">${pelicula.sipnosis}</p>-->
-          
-         <!--<p class="estilo">Reparto: ${pelicula.reparto}</p>-->
-          <br>
+          case 'Estreno':
+            console.log(pelicula.estado);
+            resultados += `
+            <div id="diseno-pelicula">
+            
+            <div class="icon">+</div>
+            <img id = "estado" src="logos/Estreno.png">
+            <!--<p class="estilo">Estado: ${pelicula.estado}</p>-->
+            <img id = "miniatura-pelicula"src="${pelicula.url_Imagen}" alt="Image">
+            
+            <p class="titulo-pelicula">${pelicula.nombre}</p>
+            <p class="informacion-pelicula">Estreno: ${fecha}</p>
+            <p class="informacion-pelicula">Género: ${pelicula.genero}</p>
+            <p class="advertencia-pelicula">Recomendada para Mayores de ${pelicula.restriccionEdad} años</p>
+            <p class="advertencia-pelicula">Duración: ${duracion}</p>
+            
+            <!--<p class="sipnosis-pelicula">${pelicula.sipnosis}</p>-->
+            
+           <!--<p class="estilo">Reparto: ${pelicula.reparto}</p>-->
             <br>
-            </div>
-          `;
-
-        break;
-
-        case 'Pre-estreno':
-          console.log(pelicula.estado);
-          resultados += `
-          <div id="diseno-pelicula">
-          <div class="icon">+</div>
-          <img id = "estado" src="logos/Pre-estreno.png">
-          <!--<p class="estilo">Estado: ${pelicula.estado}</p>-->
-          <img id = "miniatura-pelicula"src="${pelicula.url_Imagen}" alt="Image">
-          
-          <p class="titulo-pelicula">${pelicula.nombre}</p>
-          <p class="informacion-pelicula">Estreno: ${fecha}</p>
-          <p class="informacion-pelicula">Género: ${pelicula.genero}</p>
-          <p class="advertencia-pelicula">Recomendada para Mayores de ${pelicula.restriccionEdad} años</p>
-          <p class="advertencia-pelicula">Duración: ${duracion}</p>
-          
-          <!--<p class="sipnosis-pelicula">${pelicula.sipnosis}</p>-->
-          
-         <!--<p class="estilo">Reparto: ${pelicula.reparto}</p>-->
-          <br>
-            <br>
-            </div>
-          `;
-        
+              <br>
+              </div>
+            `;
+  
           break;
-
-          case 'Proximamente':
+  
+          case 'Pre-estreno':
             console.log(pelicula.estado);
             resultados += `
             <div id="diseno-pelicula">
             <div class="icon">+</div>
-            <img id = "estado" src="logos/Proximamente.png">
+            <img id = "estado" src="logos/Pre-estreno.png">
             <!--<p class="estilo">Estado: ${pelicula.estado}</p>-->
             <img id = "miniatura-pelicula"src="${pelicula.url_Imagen}" alt="Image">
             
@@ -112,63 +94,101 @@ document.getElementById("api").addEventListener("click", function(event) {
             `;
           
             break;
-
-        default:
-          console.log(pelicula.estado);
-          resultados += `
+  
+            case 'Proximamente':
+              console.log(pelicula.estado);
+              resultados += `
+              <div id="diseno-pelicula">
+              <div class="icon">+</div>
+              <img id = "estado" src="logos/Proximamente.png">
+              <!--<p class="estilo">Estado: ${pelicula.estado}</p>-->
+              <img id = "miniatura-pelicula"src="${pelicula.url_Imagen}" alt="Image">
+              
+              <p class="titulo-pelicula">${pelicula.nombre}</p>
+              <p class="informacion-pelicula">Estreno: ${fecha}</p>
+              <p class="informacion-pelicula">Género: ${pelicula.genero}</p>
+              <p class="advertencia-pelicula">Recomendada para Mayores de ${pelicula.restriccionEdad} años</p>
+              <p class="advertencia-pelicula">Duración: ${duracion}</p>
+              
+              <!--<p class="sipnosis-pelicula">${pelicula.sipnosis}</p>-->
+              
+             <!--<p class="estilo">Reparto: ${pelicula.reparto}</p>-->
+              <br>
+                <br>
+                </div>
+              `;
+            
+              break;
+  
+          default:
+            console.log(pelicula.estado);
+            resultados += `
+          
+            <div id="diseno-pelicula">
+            <div class="icon">+</div>
+            <!--<p class="estilo">Estado: ${pelicula.estado}</p>-->
+            <img id = "miniatura-pelicula"src="${pelicula.url_Imagen}" alt="Image">
+            
+            <p class="titulo-pelicula">${pelicula.nombre}</p>
+            <p class="informacion-pelicula">Estreno: ${fecha}</p>
+            <p class="informacion-pelicula">Género: ${pelicula.genero}</p>
+            <p class="advertencia-pelicula">Recomendada para Mayores de ${pelicula.restriccionEdad} años</p>
+            <p class="advertencia-pelicula">Duración: ${duracion}</p>
+            
+            <!--<p class="sipnosis-pelicula">${pelicula.sipnosis}</p>-->
+            
+           <!--<p class="estilo">Reparto: ${pelicula.reparto}</p>-->
+            <br>
+            </div>
+          `;
         
-          <div id="diseno-pelicula">
-          <div class="icon">+</div>
-          <!--<p class="estilo">Estado: ${pelicula.estado}</p>-->
-          <img id = "miniatura-pelicula"src="${pelicula.url_Imagen}" alt="Image">
-          
-          <p class="titulo-pelicula">${pelicula.nombre}</p>
-          <p class="informacion-pelicula">Estreno: ${fecha}</p>
-          <p class="informacion-pelicula">Género: ${pelicula.genero}</p>
-          <p class="advertencia-pelicula">Recomendada para Mayores de ${pelicula.restriccionEdad} años</p>
-          <p class="advertencia-pelicula">Duración: ${duracion}</p>
-          
-          <!--<p class="sipnosis-pelicula">${pelicula.sipnosis}</p>-->
-          
-         <!--<p class="estilo">Reparto: ${pelicula.reparto}</p>-->
-          <br>
-          </div>
-        `;
-      
-      }
-
-
-      
-      
-      
-      
+        }
+  
+  
+        
+        
+        
+        
+      });
+      responseContainer.innerHTML = resultados;
+  
+      let randomColor = function () {
+        let r = Math.floor(Math.random() * 256);
+        let g = Math.floor(Math.random() * 256);
+        let b = Math.floor(Math.random() * 256);
+        return "rgb(" + r + "," + g + "," + b + ")";
+      };
+  
+      let images = document.querySelectorAll("#miniatura-pelicula");
+      images.forEach(function(image) {
+        image.style.boxShadow = "0px 255px 183px 12px " + randomColor();
+      });
+    })
+    .catch(error => {
+      console.error('Ha ocurrido un error:', error);
     });
-    responseContainer.innerHTML = resultados;
-
-    let randomColor = function () {
-      let r = Math.floor(Math.random() * 256);
-      let g = Math.floor(Math.random() * 256);
-      let b = Math.floor(Math.random() * 256);
-      return "rgb(" + r + "," + g + "," + b + ")";
-    };
-
-    let images = document.querySelectorAll("#miniatura-pelicula");
-    images.forEach(function(image) {
-      image.style.boxShadow = "0px 255px 183px 12px " + randomColor();
-    });
-  })
-  .catch(error => {
-    console.error('Ha ocurrido un error:', error);
+  
   });
-
-});
-
+  
 
 
+
+}else{
+  alert(buscador.value.trim());
+  lupa.addEventListener('click', () => {
+    buscador.style.pointerEvents = 'auto';
+    buscador.style.opacity = 1;
+    lupa.style.transform = 'translateX(230%)';
+  });
+}
+
+
+
+/*
 document.getElementById("lista").addEventListener("click", function(event) {
   event.preventDefault();
   let searchTerm = document.getElementById("searchTerm").value;
-  axios.get(`http://18.206.202.118:8080/api/browser/cartelera`)
+  axios.get(`http://localhost:8080/api/browser/cartelera`)
   .then(response => {
     document.getElementById("determinado").style.display="none";  
     let responseContainer = document.getElementById("response");
@@ -312,7 +332,7 @@ document.getElementById("lista").addEventListener("click", function(event) {
 
 });
 
-
+*/
 
 
 

@@ -18,188 +18,211 @@
     transition: 5s;
 }
   /*Header de index y demas*/
-header{
-    background: black;
-   /* padding: 20px 0;*/
+
+  /*
+  /////////////////////////////////////////////////////////////////////////////////////////////////
+  */
+  .headerPrincipal {
+    background-color: black;
 }
 
 
-.panel{
-    display: flex;
-    width: auto;
-    height: auto;
-    
+.headerPrincipal .container {
+  display: flex;
+  align-items: center;
 }
 
-.logo-principal{
-    float: left;
-    margin: 0 55.5%;
+.headerPrincipal-nav {
+  display: flex;
+  margin-top: 0.7%;
 }
-.navegacion
-{
-    display: flex;
-}
-
-.pestañas
-{
-    top: 10%;
-    left: 18%;
-    position: relative;
-    display: flex;
-    font-family: 'Iceland';
+.headerPrincipal-nav a{
+  text-decoration: none;
+  font-family: 'Iceland';
     font-style: normal;
     font-size: 30px;
-   
+    margin: 0 0 0 9%;
 }
 
-.pestañas li{
-    margin: auto 3% auto auto;
-}
-.pestañas a{
+.headerPrincipal-nav-textoRojo{
+  width: auto;
     color: #851A1A;
-    text-decoration: none;
     transition: all 0.5s ease;
 }
-.pestañas a:hover{
-    color:whitesmoke;
-    box-shadow: 15px 15px 50px 10px #851A1A;
+.headerPrincipal-nav-textoRojo:hover{
+  color:whitesmoke;
+  box-shadow: 15px 15px 50px 10px #851A1A;
 }
 
-#tarjeta-prime:hover{
-    color: #851A1A;
-    
+.headerPrincipal-nav #tarjeta-prime{
+  display: flex;
+  transition: all 0.5s ease;
 }
 
-span {
-    transition: all 0.5s ease;
- }
-
-.yellow, .white {
-    display: inline;
-    transition: box-shadow 0.5s ease;
+.headerPrincipal-nav #tarjeta-prime:hover{
+  box-shadow: 15px 15px 50px 10px yellow;
 }
 
-.yellow {
-    color: yellow;
+.headerPrincipal-nav #tarjeta-prime .yellow{
+  color: yellow;
+}
+
+.headerPrincipal-nav #tarjeta-prime .white{
+  color: white;
+  
+  
+}
+
+.headerPrincipal-nav #tarjeta-prime .white:hover{
+  box-shadow: 15px 15px 50px 10px white;
+}
+
+
+
+.headerPrincipal-nav #ubicacion{
+  display: flex;
+  transition: all 0.5s ease;
+}
+
+.headerPrincipal-nav #ubicacion:hover{
+  box-shadow: 15px 15px 50px 10px gray;
+}
+
+.headerPrincipal-nav #ubicacion .ubicacion-union{
+  color: gray;
+  display: flex;
+}
+
+
+
+.headerPrincipal-nav #ubicacion span .imagen-ubicacion{
+  float: right;
+  margin-top: -10%;
+  transition: all 0.5s ease;
+}
+
+
+
+.headerPrincipal-nav .input-busqueda{
+ 
+  margin: 0 0 0 12%;
+}
+
+.headerPrincipal-nav .input-busqueda #lupa{
+  position: relative;
+  width: 40px;
+  height: 40px;
+  float: right;
+  transition: all 0.5s ease;
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+  
+}
+
+
+.headerPrincipal-nav .input-busqueda #lupa:hover{
+  box-shadow: 15px 15px 50px 10px #851A1A;
+}
+
+#buscar{
+  pointer-events: none;
+  opacity: 0;
+  right: 19.75%;
     position: absolute;
-    
-    
-  }
+    top: 4.75%;
+    box-shadow: 15px 15px 50px 10px #851a1a;
+    width: 7.5%;
+    height: 2.0%;
+    transition: all 2s ease;
 
-
-  
-  .white {
-    color: white;
-    margin-left: 110px;
-  }
-
-.cambio-color{
-    display: flex;
-    color: gray;
-    
-}
-
-#ubicacion-caja{
-    display: flex;
-    margin-right: 4%;
-    margin-top: 1%;
-}
-#ubicacion{
-    float: right;
-
-}
-
-
-
-form {
-    display: flex;
-    align-items: center;
-    width: 334%;
-    margin: 0 auto;
-  }
-  
-  input[type="text"] {
-    width: 70%;
+/*
     padding: 10px;
     font-size: 16px;
     border-radius: 5px 0 0 5px;
     border: none;
     border-right: 1px solid #bbb;
     font-family: Georgia, 'Times New Roman', Times, serif;
-  }
-  
-  button[type="submit"] {
-    width: 22%;
-    padding: 10px;
-    font-size: 16px;
-    /*background-color: lightblue;*/
-    color: transparent;
-    border-radius: 0 5px 5px 0;
-    border: none;
-    cursor: pointer;
-
-    box-shadow: 0px 0px 23px 10px #851A1A;
-
-    background-image: url('logos/lupa.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  #opciones
-{
-    display: inline;
-    margin-left: 17%;
+*/
 }
+
+
+
+
+.ingreso-usuario
+{
+  display: grid;
+  margin-left: 29.4%;
+}
+
 #registrar {
-    cursor: pointer;
-    
-    color: white;
-    background-color: gray;
-    border-radius: 30px;
-    width: 150px;
-    height: 50px;
-    font-size: 18px;
-    border-color: #851A1A;
-    transition: 1.5s;
+  cursor: pointer;
+  
+  color: white;
+  background-color: gray;
+  border-radius: 30px;
+  width: 150px;
+  height: 50px;
+  font-size: 18px;
+  border-color: #851A1A;
+  transition: 1.5s;
 }
 
 
 #registrar:hover{
-    /*
-    text-shadow: 4px 4px 15px #851A1A; 
-    text-shadow: 4px 4px 15px white, 0 0 20px #851A1A; */
-    box-shadow: 0px 0px 23px 10px #851A1A;
-    
+  /*
+  text-shadow: 4px 4px 15px #851A1A; 
+  text-shadow: 4px 4px 15px white, 0 0 20px #851A1A; */
+  box-shadow: 0px 0px 23px 10px #851A1A;
+  
 
-    background-color: white;
-    color: gray;
-    border-color: #851A1A;
+  background-color: white;
+  color: gray;
+  border-color: #851A1A;
 }
 
 #iniciar-sesion {
-    cursor: pointer;
-    color: white;
-    background-color: #851A1A;
-    border-radius: 30px ;
-    border-color: goldenrod;
-    width: 150px;
-    height: 50px;
-    font-size: 18px;
-    transition: 1.5s;
+  cursor: pointer;
+  color: white;
+  background-color: #851A1A;
+  border-radius: 30px ;
+  border-color: goldenrod;
+  width: 150px;
+  height: 50px;
+  font-size: 18px;
+  transition: 1.5s;
 }
 
 #iniciar-sesion:hover{
-    /*
-    text-shadow: 4px 4px 15px #851A1A; 
-    text-shadow: 4px 4px 15px white, 0 0 20px #851A1A; */
-    box-shadow: 0px 0px 23px 10px goldenrod;
-    
+  /*
+  text-shadow: 4px 4px 15px #851A1A; 
+  text-shadow: 4px 4px 15px white, 0 0 20px #851A1A; */
+  box-shadow: 0px 0px 23px 10px goldenrod;
+  
 
-    background-color: white;
-    color: #851A1A;
-    border-color: #851A1A;
+  background-color: white;
+  color: #851A1A;
+  border-color: #851A1A;
 }
+
+
+/*
+.headerPrincipal-nav .input-busqueda{
+  margin: 0 0 0 10%;
+}
+
+.headerPrincipal-nav .input-busqueda #buscar{
+  width: 10%;
+}
+
+
+.input-busqueda .imagen-lupa{
+  
+}
+*/
+
+/*
+//////////////////////////////////////////////////////////////////////////////////
+*/
 
 
 .header-line {
@@ -308,6 +331,7 @@ main{
 
  
 #catalogo{
+  background: linear-gradient(black,#333,black);
 }
 
 .texto-peliculas {
