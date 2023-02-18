@@ -23,9 +23,9 @@ const buscador = document.querySelector('#buscar');
 
 if (buscador.value.trim() !== '') {
   
-  document.getElementById("lista").addEventListener("click", function(event) {
+  document.getElementById("lupa").addEventListener("click", function(event) {
     event.preventDefault();
-    let searchTerm = document.getElementById("searchTerm").value;
+    let searchTerm = document.getElementById("buscar").value;
     axios.get(`http://localhost:8080/api/browser/${buscar}`)
     .then(response => {
       document.getElementById("determinado").style.display="none";  
@@ -174,10 +174,10 @@ if (buscador.value.trim() !== '') {
 
 
 }else{
-  alert(buscador.value.trim());
   lupa.addEventListener('click', () => {
-    buscador.style.pointerEvents = 'auto';
+    buscador.style.pointerEvents = "auto";
     buscador.style.opacity = 1;
+    lupa.style.opacity = 1;
     lupa.style.transform = 'translateX(230%)';
   });
 }

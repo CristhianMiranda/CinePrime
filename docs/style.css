@@ -31,6 +31,9 @@
   display: flex;
   align-items: center;
 }
+.headerPrincipal-logo{
+  margin-left: 3.5%;
+}
 
 .headerPrincipal-nav {
   display: flex;
@@ -109,31 +112,40 @@
 }
 
 .headerPrincipal-nav .input-busqueda #lupa{
+  opacity: 50%;
   position: relative;
   width: 40px;
   height: 40px;
   float: right;
-  transition: all 0.5s ease;
-  transition: transform 0.2s ease-in-out;
+ /* transition: all 0.5s ease;*/
+  
+  transition: transform 0.2s ease-in-out,opacity 0.3s ease-in;
+  /*transition: opacity 0.3s ease-in;*/
+  
   cursor: pointer;
   
 }
 
 
 .headerPrincipal-nav .input-busqueda #lupa:hover{
+  opacity: 70%;
   box-shadow: 15px 15px 50px 10px #851A1A;
 }
 
 #buscar{
+  font-family: 'Iceland';
+  color: white;
+  background: black;
   pointer-events: none;
   opacity: 0;
-  right: 19.75%;
+  right: 16.2%;
     position: absolute;
-    top: 4.75%;
+    top: 5.2%;
     box-shadow: 15px 15px 50px 10px #851a1a;
     width: 7.5%;
     height: 2.0%;
     transition: all 2s ease;
+    font-size: 1.2em;
 
 /*
     padding: 10px;
@@ -629,7 +641,11 @@ form input{
 
 
 @media screen and (max-width:480px) {
+  .container{
     
+    
+  }  
+  /*
     .logo-principal{
         margin: 1% 0 0 0;
         float: left;
@@ -694,7 +710,7 @@ form input{
    }
    #terminos p{
     font-size: 1.3em;
-   }
+   }*/
 
 }
 
