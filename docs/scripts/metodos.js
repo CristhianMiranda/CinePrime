@@ -13,19 +13,26 @@ function convertMinutesToHoursAndMinutes(minutes) {
   return hours + " hrs y " + remainingMinutes + " min";
 }
 
-const lupa = document.querySelector('#lupa');
-const buscador = document.querySelector('#buscar');
+
 /*lupa.addEventListener('click', () => {
   buscador.style.pointerEvents = 'auto';
   buscador.style.opacity = 1;
   lupa.style.transform = 'translateX(230%)';
 });*/
 
-if (buscador.value.trim() !== '') {
-  
-  document.getElementById("lista").addEventListener("click", function(event) {
+
+/*
+buscador.style.pointerEvents = 'auto';
+    buscador.style.opacity = 1;
+ */
+
+    const lupa = document.querySelector('#lupa');
+    const buscador = document.querySelector('#buscar');
+
+if (buscador.value.trim() === 'hola') {
+  document.getElementById("lupa").addEventListener("click", function(event) {
     event.preventDefault();
-    let searchTerm = document.getElementById("searchTerm").value;
+    //let searchTerm = document.getElementById("searchTerm").value;
     axios.get(`http://localhost:8080/api/browser/${buscar}`)
     .then(response => {
       document.getElementById("determinado").style.display="none";  
@@ -174,11 +181,11 @@ if (buscador.value.trim() !== '') {
 
 
 }else{
-  alert(buscador.value.trim());
+  //(buscador.value.trim());
   lupa.addEventListener('click', () => {
     buscador.style.pointerEvents = 'auto';
     buscador.style.opacity = 1;
-    lupa.style.transform = 'translateX(230%)';
+    lupa.style.transform = 'translateX(255%)';
   });
 }
 
