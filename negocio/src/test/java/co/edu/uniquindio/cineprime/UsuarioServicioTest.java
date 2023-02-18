@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.jdbc.Sql;
-
+import java.util.Random;
 @SpringBootTest
 //@Transactional
 
@@ -21,6 +21,82 @@ public class UsuarioServicioTest {
 
     @Autowired
     private EmailService emailService;
+
+
+
+
+    public static int[][] llenarMatrizAleatoria(int filas, int columnas) {
+        int[][] matriz = new int[filas][columnas];
+
+        Random random = new Random();
+
+        for (int i = 0; i < filas; i++) {
+            for (int j = 0; j < columnas; j++) {
+                matriz[i][j] = random.nextInt(10); // Valor aleatorio entre 0 y 99
+            }
+        }
+
+        return matriz;
+    }
+
+    public static int[][] llenarMatrizDeNumero(int filas, int columnas,int numero)
+    {
+        int[][] matriz = new int[filas][columnas];
+
+        for (int i = 0; i < filas; i++) {
+            for (int j = 0; j < columnas; j++) {
+
+                matriz[i][j] = numero;
+                System.out.println(matriz[i][j]);
+            }
+        }
+
+        return matriz;
+    }
+    @Test
+    public void metodoUnoMatriz()
+    {
+        // Tamaño de las matrices
+        int size = 4;
+
+        // Declaración e inicialización de las matrices B, C y A
+        /*
+        int[][] matrizB = llenarMatrizDeNumero(size, size,5);
+        int[][] matrizC = llenarMatrizDeNumero(size, size,1);*/
+        int[][] matrizB = llenarMatrizAleatoria(size,size);
+        imprimirMatriz(matrizB,"B",size);
+        int[][] matrizC = llenarMatrizAleatoria(size,size);
+        imprimirMatriz(matrizC,"C",size);
+        int[][] matrizA = new int[size][size];
+
+        // Multiplicación de matrices y almacenamiento en A
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                for (int k = 0; k < size; k++) {
+                    //System.out.println(matrizB[i][k] * matrizC[k][j]);
+                    matrizA[i][j] += matrizB[i][k] * matrizC[k][j];
+                }
+            }
+        }
+
+
+        imprimirMatriz(matrizA,"A",size);
+
+
+    }
+
+    public void imprimirMatriz(int[][] matriz,String letra,int size)
+    {
+        // Imprimir la matriz A
+        System.out.println("Matriz"+letra+": ");
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < size; j++) {
+                System.out.print(matriz[i][j] + " ");
+            }
+            System.out.println(); // Salto de línea al final de cada fila
+        }
+
+    }
 
 /*
     @Test

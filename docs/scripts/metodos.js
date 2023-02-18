@@ -13,19 +13,34 @@ function convertMinutesToHoursAndMinutes(minutes) {
   return hours + " hrs y " + remainingMinutes + " min";
 }
 
-const lupa = document.querySelector('#lupa');
-const buscador = document.querySelector('#buscar');
+
 /*lupa.addEventListener('click', () => {
   buscador.style.pointerEvents = 'auto';
   buscador.style.opacity = 1;
   lupa.style.transform = 'translateX(230%)';
 });*/
 
+<<<<<<< HEAD
 if (buscador.value.trim() !== '') {
   
   document.getElementById("lupa").addEventListener("click", function(event) {
     event.preventDefault();
     let searchTerm = document.getElementById("buscar").value;
+=======
+
+/*
+buscador.style.pointerEvents = 'auto';
+    buscador.style.opacity = 1;
+ */
+
+    const lupa = document.querySelector('#lupa');
+    const buscador = document.querySelector('#buscar');
+
+if (buscador.value.trim() === 'hola') {
+  document.getElementById("lupa").addEventListener("click", function(event) {
+    event.preventDefault();
+    //let searchTerm = document.getElementById("searchTerm").value;
+>>>>>>> 45f7a7fe05b2e56a046976d69c0c72f691671ff4
     axios.get(`http://localhost:8080/api/browser/${buscar}`)
     .then(response => {
       document.getElementById("determinado").style.display="none";  
@@ -174,11 +189,19 @@ if (buscador.value.trim() !== '') {
 
 
 }else{
+<<<<<<< HEAD
+=======
+  //(buscador.value.trim());
+>>>>>>> 45f7a7fe05b2e56a046976d69c0c72f691671ff4
   lupa.addEventListener('click', () => {
     buscador.style.pointerEvents = "auto";
     buscador.style.opacity = 1;
+<<<<<<< HEAD
     lupa.style.opacity = 1;
     lupa.style.transform = 'translateX(230%)';
+=======
+    lupa.style.transform = 'translateX(255%)';
+>>>>>>> 45f7a7fe05b2e56a046976d69c0c72f691671ff4
   });
 }
 
