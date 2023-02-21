@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html class="index" lang="es">
+    <head>
+        <meta charset="UTF-8">
+        
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Cine Prime</title>
+        <link rel="shortcut icon" type="image/x-icon" href="logos/CinePrimeLogoNavegador.png">
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">    
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://unpkg.com/colorthief@2.2.0/dist/color-thief.min.js"></script>
+
+
+
+    </head>           
+
+    <body>
+       
+        <header class="headerPrincipal"> 
+            <div class="container">
+                <h1 class="headerPrincipal-logo">
+                    <a href="index.html"><img  src="logos/CinePrimeLogoSinBordes.png"></a>
+                </h1>
+                <nav class="headerPrincipal-nav">
+                    <a class="headerPrincipal-nav-textoRojo" href="index.html">CARTELERA</a>
+                    <a class="headerPrincipal-nav-textoRojo" href="index.html">CONFITERIA</a>
+                    <a class="headerPrincipal-nav-textoRojo" href="index.html">PROMOCIONES</a>
+                    <a id="tarjeta-prime" href="index.html">
+                        <span class="yellow">TARJETA</span>
+                        <span class="white">PRIME</span>
+                    </a>
+                    <a id="ubicacion" href="index.html">
+                        <span class="ubicacion-union">
+                            ARMENIA 
+                        </span>
+
+                        <span >
+                            <img class="imagen-ubicacion" src="logos/ubicacion.png">
+                        </span>
+                        
+                    </a>
+
+                    
+                        <a>
+                        <form class="input-busqueda">
+                            <!--<input type="text" id="buscar" spellcheck="false" placeholder="Buscar">-->
+                            <img id="lupa" src="logos/lupa-rojo.png">
+                            
+                            <!--<button id="api"type="submit" >Submit</button>-->
+                        </form>
+                        </a>
+                    
+                        <input type="text" id="buscar"  spellcheck="false" placeholder="Buscar">
+
+                    
+
+                    
+                    
+
+                </nav>
+                <div class="ingreso-usuario">
+                    <a href="index.html">
+                        <button id="registrar">
+                            Registrarse
+                        </button>
+                    </a>
+
+                    <a href="index.html">
+                        <button id="iniciar-sesion">
+                            Iniciar sesión
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            
+            
+            
+                
+             
+             
+        </header> 
+        <!--<main>
+            <div id="panel-main">
+                <img class="imagen-pelicula" src="fotospruebas/joker.png" alt="Joker">   
+            </div>
+        </main>  -->     
+        
+        <!--<div class="header-line"></div>-->
+        <main id="catalogo">
+        
+            <div id="determinado">
+                <h2 class="texto-peliculas">Últimas películas en cartelera</h2>
+                <section class="pelicula" id="pelicula-1">
+                <h3 class="titulo-pelicula">Avengers: Endgame</h3>
+                <img class="imagen-pelicula" src="fotospruebas/avengers-endgame.png" alt="Avengers: Endgame">
+                <p class="descripcion-pelicula">Después de los eventos devastadores de "Avengers: Infinity War", el universo está en ruinas debido a las acciones del poderoso Thanos. Con la ayuda de los aliados restantes, los Avengers deben reunirse una vez más para deshacer sus acciones y restaurar el orden en el universo.</p>
+                <button class="boton-entradas">Comprar entradas</button>
+                </section>
+                <section class="pelicula" id="pelicula-2">
+                <h3 class="titulo-pelicula">Joker</h3>
+                <img class="imagen-pelicula" src="fotospruebas/joker.png" alt="Joker">
+                <p class="descripcion-pelicula">Arthur Fleck es un hombre ignorado por la sociedad, cuya motivación en la vida es hacer reír a la gente. Sin embargo, una serie de trágicos acontecimientos lo llevarán a un camino de violencia y locura, convirtiéndose en el icónico criminal conocido como Joker.</p>
+                <button class="boton-entradas">Comprar entradas</button>
+                </section>
+            </div>
+            <div >
+                <p id="response"></p>
+            </div>
+            
+        </main>
+
+         
+        <!--<div class="footer-line"></div>-->
+        
+       
+        <footer>
+            <div class="pie-pagina">
+
+                <h1><a href="index.html"><img id="logo-pie-pagina" src="logos/CinePrimeLogoSinBordes.png"></a></h1>
+                
+                <nav>
+                    <ul class="legal">
+
+                        <li class="orden"><a href="informacion_legal.html">Informacion legal</a></li>
+                        <li class="orden"><a href="index.html">Acerca de Cine Prime</a></li>
+                        <li class="orden"><a href="index.html">Contactos PQRS</a></li>
+                        <li class="orden"><a href="index.html">Preguntas Frecuentes</a></li>
+                        <li id="copyright"><a href="index.html">© 2022 Cine Prime</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+        
+        <script src="scripts/metodos.js"></script>
+
+
+    </body>
+</html>

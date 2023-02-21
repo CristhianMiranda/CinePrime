@@ -52,7 +52,7 @@ a.headerPrincipal-nav-link.ubicacion {
 }
 
 .headerPrincipal-nav-link {
-    /*padding: 26px;*/
+    padding: 26px;
 	/*margin-left: 55px;*/
     /* margin-bottom: 10px; */
     /*color: #9799A6;*/
@@ -64,8 +64,16 @@ a.headerPrincipal-nav-link.ubicacion {
     text-decoration: none;
     transition: .5s;
     display: block;
+	transition: all 0.5s ease;	
     /* border-bottom: 1px solid #9799A6; */
 }
+
+.headerPrincipal-nav-link:hover {
+	color:whitesmoke;
+  box-shadow: 15px 15px 50px 10px #851A1A;
+
+}
+
 
 .headerPrincipal-nav .registrar {
 	cursor: pointer;
@@ -73,9 +81,9 @@ a.headerPrincipal-nav-link.ubicacion {
 	color: white;
 	background-color: gray;
 	border-radius: 30px;
-	width: 150px;
+	/*width: 150px;
 	height: 50px;
-	font-size: 18px;
+	font-size: 18px;*/
 	border-color: #851A1A;
 	transition: 1.5s;
   }
