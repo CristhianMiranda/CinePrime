@@ -119,7 +119,7 @@
   float: right;
  /* transition: all 0.5s ease;*/
   
-  transition: transform 0.2s ease-in-out,opacity 0.3s ease-in;
+  transition: transform 0.2s ease-in-out,opacity 0.3s ease-in,all 0.5s ease;
   /*transition: opacity 0.3s ease-in;*/
   
   cursor: pointer;
