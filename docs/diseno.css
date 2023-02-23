@@ -14,6 +14,7 @@ body {
 
 .headerPrincipal {
 	background-color: black;
+	
 }
 
 .headerPrincipal .container {
@@ -28,6 +29,11 @@ body {
 	/*margin-bottom: 20px;*/
 }
 
+.headerPrincipal-titulo a .logo {
+	width: 4em;
+	height: 2.9em;
+}
+
 .headerPrincipal-titulo a {
 	text-decoration: none;
 	color: inherit;
@@ -38,6 +44,32 @@ body {
 	/*margin-top: 15px;*/
 	
 }
+
+.headerPrincipal-nav-link {
+    
+	padding: 13px;
+	/*padding: 26px;*/
+	/*margin-left: 55px;*/
+    /* margin-bottom: 10px; */
+    /*color: #9799A6;*/
+    /* background-color: #FFF; */
+	color: #851A1A;
+    font-family: 'Iceland';
+    font-style: normal;
+    font-size: 35px;
+    text-decoration: none;
+    transition: .5s;
+    display: block;
+	transition: all 0.5s ease;	
+    border-bottom: 2px solid #3b3b3b;
+}
+
+.headerPrincipal-nav-link:hover {
+	color:whitesmoke;
+  box-shadow: 15px 15px 50px 10px #851A1A;
+
+}
+
 a.headerPrincipal-nav-link.tarjeta {
     color: white;
 }
@@ -51,31 +83,12 @@ a.headerPrincipal-nav-link.ubicacion {
     color: DIMGRAY;
 }
 
-.headerPrincipal-nav-link {
-    padding: 26px;
-	/*margin-left: 55px;*/
-    /* margin-bottom: 10px; */
-    /*color: #9799A6;*/
-    /* background-color: #FFF; */
-	color: #851A1A;
-    font-family: 'Iceland';
-    font-style: normal;
-    font-size: 30px;
-    text-decoration: none;
-    transition: .5s;
-    display: block;
-	transition: all 0.5s ease;	
-    /* border-bottom: 1px solid #9799A6; */
-}
 
-.headerPrincipal-nav-link:hover {
-	color:whitesmoke;
-  box-shadow: 15px 15px 50px 10px #851A1A;
-
-}
 
 
 .headerPrincipal-nav .registrar {
+	text-align: center;
+	border: 1px solid ;
 	cursor: pointer;
 	
 	color: white;
@@ -100,8 +113,17 @@ a.headerPrincipal-nav-link.ubicacion {
 	color: gray;
 	border-color: #851A1A;
   }
+  
+  button.ingresar 	
+	{
+	background: transparent;
+	border-color: transparent;
+
+  }
 
   .headerPrincipal-nav .iniciar-sesion {
+	text-align: center;
+	border: 1px solid ;
     cursor: pointer;
     color: white;
     background-color: #851A1A;
@@ -123,5 +145,258 @@ a.headerPrincipal-nav-link.ubicacion {
 	background-color: white;
 	color: #851A1A;
 	border-color: #851A1A;
+  }
+
+
+  
+
+
+
+/*Inicio de main index************************************************************************************************************/
+
+
+  #catalogo{
+	background: linear-gradient(black,#333,black);
+  }
+  
+  .texto-peliculas {
+	  text-shadow: 4px 4px 15px #851A1A, 0 0 20px black; /* sombra de texto */
+	  text-align: center;
+	  font-size: 2.5em;
+	  text-transform: uppercase;
+	  font-family: 'Iceland';
+	}
+	
+  /* Estilos comunes para todas las películas */
+  .pelicula {
+	  width: 80%;
+	  margin: 0 auto;
+	  padding: 1em;
+	  background-color: whitesmoke;
+	  border-radius: 8px;
+	}
+	
+	/* Estilos específicos para cada película */
+	#pelicula-1 {
+	  background-color: #e5f5ff;
+	}
+	
+	#pelicula-2 {
+	  background-color: #fff5e5;
+	}
+	
+	/* Estilos para el título de la película */
+	.titulo-pelicula {
+	  text-shadow: 0 0 firebrick;
+	  font-family: 'Iceberg';
+	  font-size: 2.4em;
+	  font-weight: bold;
+	}
+  
+	.informacion-pelicula{
+	  font-weight: bold;
+	  font-size: 1.8em;
+	  font-family: 'Iceberg';
+	  text-shadow: 0 0 white;
+  
+	}
+	.advertencia-pelicula{
+	  font-size: 1.59em;
+	  font-family: 'Iceland';
+	  border: solid lightgray;
+	  width: 100%;
+	  background-color: lightgray;
+	  /*text-shadow: 0 0 white;*/
+	  font-weight: bold;
+  
+	}
+	.sipnosis-pelicula{
+	  width: inherit;
+	  font-family: 'Inconsolata';
+	  font-size: 1em;
+	  color: whitesmoke;
+	 /* text-shadow: 4px 4px 15px white, 0 0 20px #851a1a;*/
+  
+	}
+	
+	/* Estilos para la imagen de la película */
+	.imagen-pelicula {
+	  width: 100%;
+	  height: auto;
+	  margin-bottom: 1em;
+	}
+	
+	/* Estilos para la descripción de la película */
+	.descripcion-pelicula {
+	  font-size: 1.2em;
+	  line-height: 1.5;
+	  margin-bottom: 1em;
+	}
+	
+	/* Estilos para el botón de entradas */
+	.boton-entradas {
+	  padding: 0.75em 1.5em;
+	  border: none;
+	  border-radius: 4px;
+	  background-color: #ffa600;
+	  color: #fff;
+	  font-weight: bold;
+	  cursor: pointer;
+	}
+	
+	.boton-entradas:hover {
+	  background-color: #ff8c00;
+	}
+
+
+ /*Fin main index************************************************************************************************************/
+
+
+
+
+
+
+
+
+
+
+  @media screen and (max-width:1600px) and (min-width:1441px) {
+	.headerPrincipal .container {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+	
+	.headerPrincipal-titulo a .logo {
+		/*
+		width: 4em;
+    	height: 2.9em;*/
+		width: 3.5em;
+		height: 2.4em;
+	}
+	}
+	
+	.headerPrincipal-titulo a {
+		text-decoration: none;
+		color: inherit;
+	}
+	.headerPrincipal-nav-link {
+		padding: 11.3px;
+		/*font-size: 25px;*/
+		
+	}
+  
+
+
+  @media screen and (max-width:1440px) and (min-width:1280px)  {
+	.headerPrincipal .container {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+	
+	.headerPrincipal-titulo a .logo {
+		/*
+		width: 4em;
+    	height: 2.9em;*/
+		width: 3em;
+		height: 1.9em;
+	}
+	
+	.headerPrincipal-titulo a {
+		text-decoration: none;
+		color: inherit;
+	}
+	.headerPrincipal-nav-link {
+		padding: 11.3px;
+		font-size: 26px;
+	/*	font-size: 20px;*/
+		
+	}
+  }
+
+
+  
+  @media screen and (max-width:1176px) and (min-width:1152px) {
+	.headerPrincipal .container {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+	
+	.headerPrincipal-titulo a .logo {
+		/*
+		width: 4em;
+    	height: 2.9em;*/
+		
+		width: 2.5em;
+		height: 1.5em;
+	}
+	
+	.headerPrincipal-titulo a {
+		text-decoration: none;
+		color: inherit;
+	}
+	.headerPrincipal-nav-link {
+	/*	font-size: 15px;*/
+		font-size: 22px;
+		
+	}
+  }
+
+
+  @media screen and (max-width:1151px) and (min-width:1012px) {
+	.headerPrincipal .container {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+	
+	.headerPrincipal-titulo a .logo {
+		/*
+		width: 4em;
+    	height: 2.9em;*/
+		
+		width: 2.5em;
+		height: 1.5em;
+	}
+	
+	.headerPrincipal-titulo a {
+		text-decoration: none;
+		color: inherit;
+	}
+	.headerPrincipal-nav-link {
+	/*	font-size: 13.5px;*/
+		font-size: 19px;
+		
+	}
+  }
+
+
+  @media screen and (max-width:1023px) and (min-width:800px) {
+	.headerPrincipal .container {
+		display: flex;
+		align-items: center;
+		justify-content: unset;
+	}
+	
+	.headerPrincipal-titulo a .logo {
+		/*
+		width: 4em;
+    	height: 2.9em;*/
+		
+		width: 1.5em;
+    	height: 1.5em;
+	}
+	
+	.headerPrincipal-titulo a {
+		text-decoration: none;
+		color: inherit;
+	}
+	.headerPrincipal-nav-link {
+		font-size: 14.19px;
+		padding: 9px;
+		
+	}
   }
 

@@ -2,9 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Mini Alura | Cursos online</title>
-	<link rel="stylesheet" href="reset.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Cine Prime</title>
+    <link rel="shortcut icon" type="image/x-icon" href="logos/CinePrimeLogoNavegador.png">
+    <link rel="stylesheet" href="reset.css">
 	<link rel="stylesheet" href="diseno.css">
 </head>
 <body>
@@ -12,40 +13,69 @@
 	<header class="headerPrincipal">
 		<div class="container">
 			<h1 class="headerPrincipal-titulo">
-				<a href="#"><img  src="logos/CinePrimeLogoSinBordes.png"></a>
+				<a href="#"><img class="logo" src="logos/CinePrimeLogoSinBordes.png"></a>
 			</h1>
 
 			<nav class="headerPrincipal-nav">
+				<button class="ingresar">
 				<a class="headerPrincipal-nav-link" href="#">CARTELERA</a>
+				</button>
+				<button class="ingresar">
 				<a class="headerPrincipal-nav-link" href="#">CONFITERIA</a>
-				<a class="headerPrincipal-nav-link" href="#">PROMOCIONES</a>
-				<a class="headerPrincipal-nav-link tarjeta" href="#">TARJETA <span class="prime">PRIME</span></a>
-				<a class="headerPrincipal-nav-link ubicacion" href="#">ARMENIA</a>
-				<a class="headerPrincipal-nav-link iniciar-sesion" href="#">Iniciar sesion</a>
-				<a class="headerPrincipal-nav-link registrar" href="#">
-					
-						Registrarse
-					
-				</a>
+				</button>
+				<button class="ingresar">
+					<a class="headerPrincipal-nav-link" href="#">PROMOCIONES</a>
+				</button>
+				<button class="ingresar">
+					<a class="headerPrincipal-nav-link tarjeta" href="#">TARJETA<span class="prime">PRIME</span></a>
+				</button>
+				<button class="ingresar">
+					<a class="headerPrincipal-nav-link ubicacion" href="#">ARMENIA</a>
+				</button>
+				<button class="ingresar">
+					<a class="headerPrincipal-nav-link iniciar-sesion" href="#">Loguearse</a>
+				</button>
+				<button class="ingresar">
+					<a class="headerPrincipal-nav-link registrar" href="#">
+						
+							Registrarse
+						
+					</a>
+				</button>
+				
 				<!--<a class="headerPrincipal-nav-link headerPrincipal-nav-link-app" href="#">Nuestra APP</a>-->
 			</nav>
 		</div>
 
 	</header>
         
-        <main >
         
-            
-            
-        </main>
-
-         
-       
+	<main id="catalogo">
         
+		<div id="determinado">
+			<h2 class="texto-peliculas">Últimas películas en cartelera</h2>
+			<section class="pelicula" id="pelicula-1">
+			<h3 class="titulo-pelicula">Avengers: Endgame</h3>
+			<img class="imagen-pelicula" src="fotospruebas/avengers-endgame.png" alt="Avengers: Endgame">
+			<p class="descripcion-pelicula">Después de los eventos devastadores de "Avengers: Infinity War", el universo está en ruinas debido a las acciones del poderoso Thanos. Con la ayuda de los aliados restantes, los Avengers deben reunirse una vez más para deshacer sus acciones y restaurar el orden en el universo.</p>
+			<button class="boton-entradas">Comprar entradas</button>
+			</section>
+			<section class="pelicula" id="pelicula-2">
+			<h3 class="titulo-pelicula">Joker</h3>
+			<img class="imagen-pelicula" src="fotospruebas/joker.png" alt="Joker">
+			<p class="descripcion-pelicula">Arthur Fleck es un hombre ignorado por la sociedad, cuya motivación en la vida es hacer reír a la gente. Sin embargo, una serie de trágicos acontecimientos lo llevarán a un camino de violencia y locura, convirtiéndose en el icónico criminal conocido como Joker.</p>
+			<button class="boton-entradas">Comprar entradas</button>
+			</section>
+		</div>
+		<div >
+			<p id="response"></p>
+		</div>
+		
+	</main>
        
-        <footer>
+    <footer>
             
-        </footer>
+    </footer>
         
         <script src="scripts/metodos.js"></script>
 
