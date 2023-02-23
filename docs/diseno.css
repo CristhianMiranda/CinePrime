@@ -82,6 +82,9 @@ a.headerPrincipal-nav-link.tarjeta {
 a.headerPrincipal-nav-link.ubicacion {
     color: DIMGRAY;
 }
+img.ubicacion {
+	height: 15px;
+}
 
 
 
@@ -254,8 +257,27 @@ a.headerPrincipal-nav-link.ubicacion {
 
 
 
+/*Inicio de footer************************************************************************************************************/
+
+.rodapePrincipal{
+	background: black;
+}
+
+.rodapePrincipal .container .rodapePrincipal-informacion-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+	font-family: 'Iceland';
+}
 
 
+
+a.rodapePrincipal-informacion-list-link.informacion {
+	font-size: 1.85em;
+	text-decoration: none;
+	color: white;
+}
+/*Fin de footer************************************************************************************************************/
 
 
 
@@ -283,6 +305,10 @@ a.headerPrincipal-nav-link.ubicacion {
 	.headerPrincipal-nav-link {
 		padding: 11.3px;
 		/*font-size: 25px;*/
+		
+	}
+	a.rodapePrincipal-informacion-list-link.informacion {
+		font-size: 1.6em;
 		
 	}
   
@@ -342,6 +368,10 @@ a.headerPrincipal-nav-link.ubicacion {
 		font-size: 22px;
 		
 	}
+	a.rodapePrincipal-informacion-list-link.informacion {
+		font-size: 1.4em;
+		
+	}
   }
 
 
@@ -370,6 +400,10 @@ a.headerPrincipal-nav-link.ubicacion {
 		font-size: 19px;
 		
 	}
+	a.rodapePrincipal-informacion-list-link.informacion {
+		font-size: 1.3em;
+		
+	}
   }
 
 
@@ -393,6 +427,35 @@ a.headerPrincipal-nav-link.ubicacion {
 		text-decoration: none;
 		color: inherit;
 	}
+	.headerPrincipal-nav-link {
+		font-size: 14.19px;
+		padding: 9px;
+		
+	}
+  }
+
+  @media screen and (max-width:420px){
+
+	.headerPrincipal .container {
+		display: grid;
+		align-items: center;
+		justify-content: unset;
+	}
+	
+	.headerPrincipal-titulo a .logo {
+		/*
+		width: 4em;
+    	height: 2.9em;*/
+		
+		width: 1.5em;
+    	height: 1.5em;
+	}
+	
+	.headerPrincipal-titulo a {
+		text-decoration: none;
+		color: inherit;
+	}
+
 	.headerPrincipal-nav-link {
 		font-size: 14.19px;
 		padding: 9px;
