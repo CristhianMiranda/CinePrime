@@ -8,19 +8,24 @@ body {
 }
 
 .container {
-	width: 98%;
+	width: 100%;
 	margin: 0 auto;
+	
 }
 
 .headerPrincipal {
 	background-color: black;
 	
+	
 }
 
 .headerPrincipal .container {
 	display: flex;
+	position: fixed;
 	align-items: center;
 	justify-content: space-around;
+	background: black;
+	height: auto;
 }
 
 .headerPrincipal-titulo {
@@ -47,8 +52,8 @@ body {
 
 .headerPrincipal-nav-link {
     
-	padding: 13px;
-	/*padding: 26px;*/
+	
+	padding: 9px;
 	/*margin-left: 55px;*/
     /* margin-bottom: 10px; */
     /*color: #9799A6;*/
@@ -56,12 +61,12 @@ body {
 	color: #851A1A;
     font-family: 'Iceland';
     font-style: normal;
-    font-size: 35px;
+    font-size: 32px;
     text-decoration: none;
     transition: .5s;
     display: block;
 	transition: all 0.5s ease;	
-    border-bottom: 2px solid #3b3b3b;
+   	/*border-bottom: 1px solid #3b3b3b;*/
 }
 
 .headerPrincipal-nav-link:hover {
@@ -86,7 +91,15 @@ img.ubicacion {
 	height: 15px;
 }
 
-
+a.headerPrincipal-nav-link.login {
+    border: none;
+    padding: 0px;
+}
+/*                         ssssssssssss*/
+img.user {
+	height: 1.6em;
+    width: 100%;
+}
 
 
 .headerPrincipal-nav .registrar {
@@ -159,7 +172,8 @@ img.ubicacion {
 
 
   #catalogo{
-	background: linear-gradient(black,#333,black);
+	background:wheat;
+	/*background: linear-gradient(black,#333,black);*/
   }
   
   .texto-peliculas {
@@ -302,11 +316,7 @@ a.rodapePrincipal-informacion-list-link.informacion {
 		text-decoration: none;
 		color: inherit;
 	}
-	.headerPrincipal-nav-link {
-		padding: 11.3px;
-		/*font-size: 25px;*/
-		
-	}
+	
 	a.rodapePrincipal-informacion-list-link.informacion {
 		font-size: 1.6em;
 		
@@ -339,6 +349,7 @@ a.rodapePrincipal-informacion-list-link.informacion {
 	/*	font-size: 20px;*/
 		
 	}
+	
   }
 
 
@@ -407,7 +418,7 @@ a.rodapePrincipal-informacion-list-link.informacion {
   }
 
 
-  @media screen and (max-width:1023px) and (min-width:800px) {
+  @media screen and (max-width:1023px) and (min-width:421px) {
 	.headerPrincipal .container {
 		display: flex;
 		align-items: center;
