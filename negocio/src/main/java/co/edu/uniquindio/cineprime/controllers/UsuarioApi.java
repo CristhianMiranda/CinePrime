@@ -10,7 +10,8 @@ import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin("*")
+@CrossOrigin(origins = "*", methods = { RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE })
+
 public class UsuarioApi {
 
     @Autowired

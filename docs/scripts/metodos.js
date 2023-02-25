@@ -1,4 +1,5 @@
 
+
 function convertirFecha(fecha) {
   let fechaConvertida = new Date(fecha);
   let dia = fechaConvertida.getDate();
@@ -21,6 +22,7 @@ let buscador = document.getElementById("buscar");
   lupa.style.transform = 'translateX(230%)';
 });*/
 
+/*
 if (buscador.value.trim() !== '') {
   
   document.getElementById("lupa").addEventListener("click", function(event) {
@@ -181,16 +183,16 @@ if (buscador.value.trim() !== '') {
     lupa.style.transform = 'translateX(230%)';
   });
 }
+*/
 
 
 
-/*
 document.getElementById("lista").addEventListener("click", function(event) {
   event.preventDefault();
-  let searchTerm = document.getElementById("searchTerm").value;
+  /*let searchTerm = document.getElementById("searchTerm").value;*/
   axios.get(`http://localhost:8080/api/browser/cartelera`)
   .then(response => {
-    document.getElementById("determinado").style.display="none";  
+    document.getElementById("determinado").style.display="none";
     let responseContainer = document.getElementById("response");
     let peliculas = response.data;
     let resultados = '';
@@ -332,7 +334,7 @@ document.getElementById("lista").addEventListener("click", function(event) {
 
 });
 
-*/
+
 
 
 
