@@ -192,6 +192,7 @@ document.getElementById("lista").addEventListener("click", function(event) {
   /*let searchTerm = document.getElementById("searchTerm").value;*/
   axios.get(`http://localhost:8080/api/browser/cartelera`)
   .then(response => {
+    document.getElementById("header").style.position = "static";
     document.getElementById("determinado").style.display="none";
     let responseContainer = document.getElementById("response");
     let peliculas = response.data;
